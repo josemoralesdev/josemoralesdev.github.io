@@ -1,0 +1,32 @@
+@import "../global.scss";
+@media only screen and (min-width: 320px) {
+  section {
+    text-transform: lowercase;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    .image {
+      height: 300px;
+      width: 300px;
+      margin-bottom: 30px;
+    }
+    .aboutText {
+      display: flex;
+      font-variant: small-caps;
+      color: var(--black-300);
+      font-size: 1.28em;
+      line-height: 28px;
+      align-items: center;
+      letter-spacing: 0.1em;
+      font-weight: 400;
+      width: 300px;
+    }
+  }
+}
+@media only screen and (min-width: 375px) {
+  section {
+    .aboutText {
+      width: 330px;
+    }
+  }
+}
