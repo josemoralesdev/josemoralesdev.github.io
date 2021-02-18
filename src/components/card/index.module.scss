@@ -1,0 +1,35 @@
+.title {
+  font-size: 1.71em;
+  font-weight: 700;
+  margin: 0.625em auto;
+  letter-spacing: var(--letter-spacing);
+}
+.text {
+  color: var(--black-300);
+  letter-spacing: var(--letter-spacing);
+  line-height: 1.57em;
+  font-size: 1.2857em;
+  font-weight: 400;
+  margin: 0.8333em auto;
+}
+.card {
+  text-align: center;
+  padding: 50px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: (0px 2px 5px rgba(0, 0, 0, 0.1));
+  width: 320px;
+  margin-bottom: 50px;
+}
+.cardHeader {
+  width: 250px;
+  margin: 0 auto 40px;
+}
+.cardDescription {
+  width: 250px;
+  margin-bottom: 40px;
+}
+.cardTools {
+  width: 250px;
+}
