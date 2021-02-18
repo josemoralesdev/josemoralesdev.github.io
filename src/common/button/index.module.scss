@@ -1,0 +1,30 @@
+@import "../../components/global.scss";
+.primary {
+  background-color: var(--primary-color);
+  span {
+    color: white;
+  }
+}
+.default {
+  background-color: white;
+  span {
+    color: var(--black-400);
+  }
+}
+.center {
+  margin: auto;
+  display: block;
+}
+button {
+  box-sizing: border-box;
+  border: 1px solid var(--black-400);
+  border-radius: 4px;
+  font-family: var(--font-family);
+  font-size: 1em;
+  height: 3.57em;
+  line-height: 1.14em;
+  min-width: 8.57em;
+  padding: 1.14em;
+  text-align: center;
+  text-transform: uppercase;
+}
