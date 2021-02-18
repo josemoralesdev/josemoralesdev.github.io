@@ -1,0 +1,29 @@
+@import "../global.scss";
+.background {
+  background-color: var(--black-400);
+  position: absolute;
+  margin-top: -25px;
+  span {
+    text-transform: uppercase;
+    font-family: var(--font-family);
+    font-size: 2.28em;
+    line-height: 37px;
+    -webkit-text-stroke: 1px var(--black-400);
+    font-variant: small-caps;
+    color: #ffffff;
+    position: relative;
+    right: 30%;
+  }
+}
+.down {
+  transform: rotate(90deg);
+}
+.up {
+  transform: rotate(-90deg);
+}
+.right {
+  right: -50px;
+}
+.left {
+  left: -50px;
+}
