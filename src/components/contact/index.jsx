@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { ContactData } from "../../data/config"
 import Banner from "../banner/banner"
 import style from "./index.module.scss"
@@ -6,10 +6,21 @@ import { useForm } from "react-hook-form"
 import Button from "../../common/button"
 
 export default function Contact() {
+  const [formStatus, setFormStatus] = useState("")
   const { section, title, subtitle, illustration } = ContactData
-  const { register, handleSubmit, errors } = useForm()
-  const onSubmit = data => {
-    console.log(data)
+  const { register, handleSubmit, errors, reset } = useForm()
+  const FORMSPREE_URL = process.env.GATSBY_FORMSPREE_URL
+  const onSubmit = async data => {
+    const requestOptions = {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    }
+    const response = await fetch(FORMSPREE_URL, requestOptions)
+    const jsonData = await response.json()
+    jsonData.ok && setFormStatus(true)
+    !jsonData.ok && setFormStatus(false)
+    //TODO: Reset form after successfull response.
   }
   return (
     <>
@@ -26,7 +37,7 @@ export default function Contact() {
         />
         <form
           className={style.form}
-          action="https://formspree.io/f/mrgovapl"
+          action={FORMSPREE_URL}
           method="POST"
           onSubmit={handleSubmit(onSubmit)}
         >
@@ -76,12 +87,18 @@ export default function Contact() {
               Email (optional)
             </label>
             <input
+              type="email"
               className="emailInput"
               name="email"
               defaultValue=""
               placeholder="Your email"
               ref={register}
             />
+            {errors.email && errors.email.type === "email" && (
+              <p className={style.errorMessage}>
+                This field is form email format only!
+              </p>
+            )}
           </div>
           <div className={style.formDiv}>
             <label className={style.label} htmlFor="">
@@ -111,6 +128,16 @@ export default function Contact() {
             type="primary"
             text="Submit"
           />
+          {formStatus && (
+            <p className={`${style.formStatusMessage} ${style.success}`}>
+              Your form was sent succesfully!
+            </p>
+          )}
+          {formStatus === false ? (
+            <p className={`${style.formStatusMessage} ${style.error}`}>
+              There was an error, reload & try again.
+            </p>
+          ) : null}
         </form>
       </section>
     </>
