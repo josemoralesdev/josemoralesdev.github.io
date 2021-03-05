@@ -14,16 +14,14 @@
   .homeSection {
     margin-top: 75px;
   }
-  .profilePicture {
-    width: 300px;
-    height: 300px;
-  }
+
   .wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 300px;
+    margin: 0 auto;
   }
   .p {
     margin: 40px 0;
