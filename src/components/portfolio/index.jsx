@@ -2,10 +2,30 @@ import React from "react"
 import { ProjectsData } from "../../data/config"
 import Banner from "../banner/banner"
 import style from "./index.module.scss"
-import projectImage from "../../assets/images/el-antojo-500.png"
+import { graphql, useStaticQuery } from "gatsby"
+import Img from "gatsby-image"
 
 export default function Portfolio() {
+  const data = useStaticQuery(graphql`
+    query MyQuery {
+      allFile(filter: { relativeDirectory: { eq: "projects" } }) {
+        nodes {
+          id
+          childImageSharp {
+            id
+            fixed(width: 300, height: 300) {
+              ...GatsbyImageSharpFixed
+            }
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+    }
+  `)
   const { section, title, projectsGrid } = ProjectsData
+  // Make project page template with markdown.
   const categoriesList = projectsGrid.categories.map(category => {
     return (
       <p
@@ -17,24 +37,26 @@ export default function Portfolio() {
       </p>
     )
   })
+  const projectListImg = data.allFile.nodes.map(node => {
+    return (
+      <Img
+        key={node.childImageSharp.id}
+        fluid={node.childImageSharp.fluid}
+        alt=""
+        className={style.projectImage}
+      />
+    )
+  })
+  console.log(data)
   return (
     <>
       <section className={section} id={section}>
         <Banner direction="down" position="right" text={section} />
         <h2>{title}</h2>
         <div className="projects">
-          <div className={style.projectsCategoryRow}>{categoriesList}</div>
+          {/* <div className={style.projectsCategoryRow}>{categoriesList}</div> */}
           <div className={style.projectsGrid}>
-            <div className={style.projectCard}>
-              <img
-                src={projectImage}
-                alt=""
-                srcset=""
-                className={style.projectImage}
-              />
-              <p className="projectDescription">Project description</p>
-              <p className="projectTags">#tags</p>
-            </div>
+            <div className={style.projectCard}>{projectListImg}</div>
           </div>
         </div>
       </section>
