@@ -7,6 +7,7 @@ import style from "./index.module.scss"
 export default function Header() {
   const [clicked, setClicked] = useState(false)
   const isClicked = clicked ? style.clicked : style.notClicked
+  const isActive = clicked ? style.hamActive : ""
 
   useEffect(() => {
     clicked && (document.body.style.overflow = "hidden")
@@ -18,7 +19,10 @@ export default function Header() {
         <Logo />
         <nav>
           <button onClick={() => setClicked(!clicked)}>
-            <img src={hamMenu} alt="" />
+            {/* <img src={hamMenu} alt="" /> */}
+            <div className={`${style.hamMenu} ${isActive}`}>
+              <div></div>
+            </div>
           </button>
           <ul
             onClick={() => setClicked(!clicked)}
