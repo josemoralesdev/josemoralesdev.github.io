@@ -3,7 +3,8 @@
   font-size: 1.71em;
   letter-spacing: var(--letter-spacing);
   text-align: justify;
-  margin-top: 50px;
+  margin: 50px auto 0;
+  width: 90vw;
 }
 .illustration {
   width: 300px;
@@ -46,6 +47,16 @@ textarea {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  width: 90%;
-  max-width: 420px;
+  width: 100%;
+  max-width: 375px;
+}
+.formStatusMessage {
+  margin-top: 2rem;
+  text-align: center;
+}
+.error {
+  color: red;
+}
+.success {
+  color: green;
 }
