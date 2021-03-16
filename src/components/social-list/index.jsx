@@ -6,7 +6,13 @@ export default function SocialList() {
   const { socialLinks } = HomeData
   const socialList = Object.values(socialLinks).map(link => {
     return (
-      <a key={link.id} href={link.url} target="_blank" rel="noreferrer">
+      <a
+        key={link.id}
+        href={link.url}
+        target="_blank"
+        rel="noreferrer"
+        aria-label={`Click here to go to José ${link.name}`}
+      >
         {link.icon}
       </a>
     )
