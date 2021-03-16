@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react"
 import NavLinks from "../nav-links"
 import Logo from "../logo"
-import hamMenu from "../../assets/icons/menu.svg"
 import style from "./index.module.scss"
 
 export default function Header() {
@@ -10,20 +9,21 @@ export default function Header() {
   const isActive = clicked ? style.hamActive : ""
 
   useEffect(() => {
-    clicked && (document.body.style.overflow = "hidden")
-    !clicked && (document.body.style.overflow = "")
+    if (window.innerWidth < 768) {
+      clicked && (document.body.style.overflow = "hidden")
+      !clicked && (document.body.style.overflow = "")
+    } else if (window.innerWidth > 768) {
+      document.body.style.overflow = ""
+    }
+    return () => {
+      document.body.style.overflow = ""
+    }
   }, [clicked])
   return (
     <>
       <header style={style.header}>
         <Logo />
         <nav>
-          <button onClick={() => setClicked(!clicked)}>
-            {/* <img src={hamMenu} alt="" /> */}
-            <div className={`${style.hamMenu} ${isActive}`}>
-              <div></div>
-            </div>
-          </button>
           <ul
             onClick={() => setClicked(!clicked)}
             className={`${isClicked} ${style.linkList}`}
@@ -31,6 +31,14 @@ export default function Header() {
             <NavLinks />
           </ul>
         </nav>
+        <button
+          onClick={() => setClicked(!clicked)}
+          aria-label="Navigation Button"
+        >
+          <div className={`${style.hamMenu} ${isActive}`}>
+            <div></div>
+          </div>
+        </button>
       </header>
     </>
   )
