@@ -4,14 +4,15 @@ import Banner from "../banner/banner"
 import Card from "../card"
 import ComputerIcon from "../../assets/icons/computer-icon.svg"
 import DesignIcon from "../../assets/icons/design-icon.svg"
+import styles from "./index.module.scss"
 
 export default function Services() {
   const { section } = ServicesData
   return (
     <>
-      <section id={section} className={section}>
+      <section id={section} className={styles.services}>
         <Banner text={section} direction="up" />
-        <div className="cardWrapper">
+        <div className={styles.cardWrapper}>
           <Card
             iconsrc={DesignIcon}
             headerTitle="Design"
