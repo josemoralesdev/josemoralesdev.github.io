@@ -5,7 +5,7 @@
   --black-300: #666666;
   --black-200: #898989;
   --black-100: #c4c4c4;
-  --primary-color: var(--black-500);
+  --primary-color: var(--black-400);
   --secondary-color: var(--black-400);
   --font-family: Roboto, sans-serif;
   --letter-spacing: 0.1em;
@@ -26,7 +26,6 @@ h2 {
   font-weight: 400;
   letter-spacing: var(--letter-spacing);
   text-align: center;
-  width: 70vw;
   margin: 0 auto;
 }
 @media only screen and (min-width: 320px) {
@@ -41,6 +40,20 @@ h2 {
 }
 @media only screen and (min-width: 425px) {
   body {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  body {
     font-size: 15px;
+  }
+  section {
+    padding: 95px 2rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  body {
+    font-size: 16px;
   }
 }
