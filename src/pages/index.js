@@ -1,8 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
-import Zoom from 'react-reveal/Zoom'
 
-import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
 import Header from '../components/header/'
@@ -14,6 +11,7 @@ import Contact from "../components/contact"
 import Footer from '../components/footer'
 const IndexPage = () => (
   <>
+    <SEO title="Home Page" />
     <Header />
     <HomeSection />
     <About />
