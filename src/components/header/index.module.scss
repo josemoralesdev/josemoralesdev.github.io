@@ -29,13 +29,16 @@ header {
     li {
       flex: 1 1 100%;
       list-style: none;
-      font-size: 2em;
+      font-size: 1.125em;
       font-weight: 300;
       font-variant: small-caps;
+      text-transform: uppercase;
+      transition: background 0.3s ease-in-out;
       &:hover {
-        background-color: var(--black-300);
+        background-color: var(--black-400);
       }
       a {
+        transition: color 0.3s ease-in-out;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -70,7 +73,7 @@ header {
   &:after,
   &:before,
   div {
-    background-color: black;
+    background-color: var(--primary-color);
     content: "";
     display: block;
     height: 4px;
@@ -88,5 +91,49 @@ header {
   }
   div {
     transform: scale(0);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  header {
+    .hamMenu {
+      display: none;
+    }
+    button {
+      display: none;
+    }
+    nav {
+      height: 100%;
+      flex: 3;
+      .linkList {
+        display: flex;
+        transform: translateY(0%);
+        opacity: 1;
+        pointer-events: all;
+        flex-flow: row nowrap;
+        background-color: transparent;
+        flex: 1;
+        height: inherit;
+        position: relative;
+        top: unset;
+        li {
+          a {
+            color: var(--black-400);
+            display: flex;
+            padding: 1rem;
+            &:hover {
+              color: white;
+            }
+          }
+        }
+      }
+    }
+    .clicked,
+    .notClicked {
+      display: flex;
+      transform: translateY(0%);
+      opacity: 1;
+      pointer-events: all;
+    }
   }
 }
