@@ -1,4 +1,7 @@
-.logo {
-  height: 42px;
-  width: 72px;
+.logoWrapper {
+  flex: 1;
+  .logo {
+    height: 42px;
+    width: 72px;
+  }
 }

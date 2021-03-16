@@ -7,15 +7,27 @@ export default function Logo({ className, inverted = "false" }) {
   const returnLogo =
     inverted === "true" ? (
       <>
-        <a href="#home">
-          <img className={className} src={logoWhite} />
-        </a>
+        <div className={styles.logoWrapper}>
+          <a href="#home" aria-label="Click to navigate to home">
+            <img
+              className={styles.logo}
+              src={logoWhite}
+              alt="José E. Morales Logo"
+            />
+          </a>
+        </div>
       </>
     ) : (
       <>
-        <a href="#home">
-          <img className={styles.logo} src={logo} />
-        </a>
+        <div className={styles.logoWrapper}>
+          <a href="#home" aria-label="Click to navigate to home">
+            <img
+              className={styles.logo}
+              src={logo}
+              alt="José E. Morales Logo"
+            />
+          </a>
+        </div>
       </>
     )
   return <>{returnLogo}</>
