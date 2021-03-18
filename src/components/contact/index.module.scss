@@ -1,62 +1,52 @@
-.subtitle {
-  font-weight: 300;
-  font-size: 1.71em;
-  letter-spacing: var(--letter-spacing);
-  text-align: justify;
-  margin: 50px auto 0;
-  width: 90vw;
+.contact {
+  max-width: 1024px;
+  > h2 {
+    width: 80%;
+  }
+  .subtitle {
+    font-weight: 300;
+    font-size: 1.71em;
+    letter-spacing: var(--letter-spacing);
+    text-align: justify;
+    margin: 50px auto 0;
+    width: 80%;
+  }
+  .leftColumn {
+    display: flex;
+    .illustration {
+      width: 80%;
+      height: auto;
+      margin: 50px auto;
+      max-width: 500px;
+    }
+  }
 }
-.illustration {
-  width: 300px;
-  height: 250px;
-  margin: 50px auto;
-}
-.formDiv {
-  margin-bottom: 20px;
-}
-.label {
-  display: block;
-  font-size: 1.5714em;
-  font-weight: 300;
-  color: var(--black-400);
-  margin-bottom: 8px;
-}
-.errorMessage {
-  margin: 0;
-  margin-top: 8px;
-  font-variant: unset;
-  color: red;
-}
-input {
-  height: 40px;
-}
-input,
-textarea {
-  font-size: 1em;
-  padding: 8px;
-  row-gap: 15px;
-  width: 100%;
-  border: 1px solid var(--black-400);
-  border-radius: 4px;
-  font: var(--font-family);
-}
-.textAreaInput {
-  resize: none;
-}
-.form {
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  width: 100%;
-  max-width: 375px;
-}
-.formStatusMessage {
-  margin-top: 2rem;
-  text-align: center;
-}
-.error {
-  color: red;
-}
-.success {
-  color: green;
+
+@media only screen and (min-width: 768px) {
+  .contact {
+    display: flex;
+    flex-flow: row wrap;
+    > h2 {
+      width: 80%;
+    }
+
+    .subtitle {
+      text-align: center;
+      width: 80%;
+    }
+    .leftColumn,
+    .rightColumn {
+      margin-top: 100px;
+    }
+    .leftColumn {
+      flex: 1 1 50%;
+      .illustration {
+        align-self: flex-start;
+        margin: 0 auto;
+      }
+    }
+    .rightColumn {
+      flex: 1 1 50%;
+    }
+  }
 }
