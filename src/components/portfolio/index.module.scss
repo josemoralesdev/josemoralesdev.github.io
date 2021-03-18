@@ -12,19 +12,26 @@
     }
   }
 }
-.projectsGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  justify-items: center;
-  gap: 1em 0em;
-  margin-top: 3em;
-}
-.projectCard {
-  width: 250px;
-  height: fit-content;
-  margin: 0 auto;
-}
-.projectImage {
-  width: 250px;
-  height: 250px;
+.portfolio {
+  .portfolioHeader {
+    max-width: 80vw;
+  }
+  .projects {
+    margin-top: 5em;
+    .projectsGrid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      justify-items: center;
+      gap: 1em 0em;
+      .projectCard {
+        max-width: 400px;
+        width: 100%;
+        margin: 0 auto;
+        .projectImage {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
 }
