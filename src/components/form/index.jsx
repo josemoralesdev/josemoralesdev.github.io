@@ -43,7 +43,7 @@ export default function Form() {
         )}
         {errors.name && errors.name.type === "minLength" && (
           <p className={style.errorMessage}>
-            ↑ This field requires 3+ characters of length !
+            This field requires 3+ characters of length !
           </p>
         )}
       </div>
