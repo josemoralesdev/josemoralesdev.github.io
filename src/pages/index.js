@@ -1,6 +1,4 @@
 import React from "react"
-
-import Image from "../components/image"
 import SEO from "../components/seo"
 import Header from '../components/header/'
 import HomeSection from "../components/home-section"
@@ -11,7 +9,7 @@ import Contact from "../components/contact"
 import Footer from '../components/footer'
 const IndexPage = () => (
   <>
-    <SEO title="Home Page" />
+    <SEO title="Home" />
     <Header />
     <HomeSection />
     <About />
