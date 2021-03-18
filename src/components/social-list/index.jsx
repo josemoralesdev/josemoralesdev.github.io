@@ -1,4 +1,5 @@
 import React from "react"
+import { Fade } from "react-reveal"
 import { HomeData } from "../../data/config"
 import styles from "./index.module.scss"
 
@@ -19,7 +20,9 @@ export default function SocialList() {
   })
   return (
     <>
-      <div className={styles.social}>{socialList}</div>
+      <Fade duration={1000}>
+        <div className={styles.social}>{socialList}</div>
+      </Fade>
     </>
   )
 }
