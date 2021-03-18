@@ -6,9 +6,9 @@ import Github from "../assets/icons/github.jsx"
 import Instagram from "../assets/icons/instagram.jsx"
 import LinkedIn from "../assets/icons/linkedin.jsx"
 // Images
-import CreateImage from '../assets/images/create.png'
+//import CreateImage from '../assets/images/create.png'
 // Illustrations
-import IdeaSVG from '../assets/illustrations/idea.svg'
+//import IdeaSVG from '../assets/illustrations/idea.svg'
 
 export const HeaderData = {
     logo: '../assets/logo/logo.svg',
@@ -32,7 +32,7 @@ export const HomeData = {
             id: '2',
             name: 'Github',
             icon: <Github />,
-            url: 'https://github.com/EduardoMorales-Dev'
+            url: 'https://github.com/josemoralesdev'
         },
         instagram: {
             id: '3',
@@ -50,13 +50,13 @@ export const HomeData = {
             id: '5',
             name: 'Messenger',
             icon: <Messenger />,
-            url: ''
+            url: 'https://m.me/josemorales.dev'
         },
     }
 }
 export const AboutData = {
     section: 'about',
-    image: `${CreateImage}`,
+    //image: `${CreateImage}`,
     textOne: 'Ever since I was a child, I\'ve been passionate about problem solving and the tech world. Today I find myself developing creative solutions in the software industry, keeping in mind the quality of my work and trying to learn a little  bit more every day.',
     textTwo: 'graduated from instituto tecnologico de sonora (itson) on the year 2015-2019.',
     textThree: 'i’ve been working as a freelance since then, some of my projects involves desktop  & web apps development.'
@@ -137,7 +137,7 @@ export const ContactData = {
     section: 'contact',
     title: 'have a project in mind ?',
     subtitle: 'you can contact me through my  email, social media, or by filling the next form:',
-    illustration: `${IdeaSVG}`,
+    //illustration: `${IdeaSVG}`,
 }
 export const FooterData = {
     section: 'footer',
