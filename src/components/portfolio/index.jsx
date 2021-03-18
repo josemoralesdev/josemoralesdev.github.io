@@ -24,9 +24,13 @@ export default function Portfolio() {
       }
     }
   `)
-  const { section, title, projectsGrid } = ProjectsData
+  const {
+    section,
+    title,
+    //   projectsGrid
+  } = ProjectsData
   // Make project page template with markdown.
-  const categoriesList = projectsGrid.categories.map(category => {
+  /*const categoriesList = projectsGrid.categories.map(category => {
     return (
       <p
         onClick={() => alert(`${category}`)}
@@ -36,7 +40,7 @@ export default function Portfolio() {
         {category}
       </p>
     )
-  })
+  })*/
   const projectListImg = data.allFile.nodes.map(node => {
     return (
       <Img
@@ -50,10 +54,10 @@ export default function Portfolio() {
   console.log(data)
   return (
     <>
-      <section className={section} id={section}>
+      <section className={style.portfolio} id="projects">
         <Banner direction="down" position="right" text={section} />
-        <h2>{title}</h2>
-        <div className="projects">
+        <h2 className={style.portfolioHeader}>{title}</h2>
+        <div className={style.projects}>
           {/* <div className={style.projectsCategoryRow}>{categoriesList}</div> */}
           <div className={style.projectsGrid}>
             <div className={style.projectCard}>{projectListImg}</div>
