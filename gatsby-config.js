@@ -1,12 +1,12 @@
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
-
 })
 module.exports = {
   siteMetadata: {
     title: `Portfolio - Josemoralesdev`,
     description: `Personal portfolio page`,
     author: `@josemorales.dev`,
+    siteUrl: 'https://josemoralesdev.github.io'
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
