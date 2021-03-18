@@ -6,9 +6,18 @@ module.exports = {
     title: `Portfolio - Josemoralesdev`,
     description: `Personal portfolio page`,
     author: `@josemorales.dev`,
-    siteUrl: 'https://josemoralesdev.github.io'
+    siteUrl: "https://josemoralesdev.github.io",
   },
   plugins: [
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        host: "josemoralesdev.github.io",
+        sitemap: "josemoralesdev.github.io/sitemap.xml",
+        policy: [{ userAgent: "*", allow: "/" }],
+      },
+    },
+    `gatsby-plugin-sitemap`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
     {
