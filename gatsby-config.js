@@ -12,8 +12,8 @@ module.exports = {
     {
       resolve: "gatsby-plugin-robots-txt",
       options: {
-        host: "josemoralesdev.github.io",
-        sitemap: "josemoralesdev.github.io/sitemap.xml",
+        host: "https://josemoralesdev.github.io/",
+        sitemap: "https://josemoralesdev.github.io/sitemap.xml",
         policy: [{ userAgent: "*", allow: "/" }],
       },
     },
