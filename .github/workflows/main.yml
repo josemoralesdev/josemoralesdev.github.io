@@ -16,6 +16,8 @@ jobs:
         run: |
           npm install
           npm run-script build
+        env:
+          GATSBY_FORMSPREE_URL: ${{ secrets.GATSBY_FORMSPREE_URL }}
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@3.6.2
