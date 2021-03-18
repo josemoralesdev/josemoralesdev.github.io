@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://josemoralesdev.github.io/sitemap.xml
+Host: https://josemoralesdev.github.io
