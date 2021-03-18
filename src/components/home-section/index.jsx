@@ -41,7 +41,7 @@ export default function HomeSection() {
               <a href="#about">
                 <Button type="default" text={defaultAction} />
               </a>
-              <a href={Resume} download target="_blank">
+              <a href={Resume} download target="_blank" rel="noreferrer">
                 <Button type="primary" text={callToAction} />
               </a>
             </div>
