@@ -1,6 +1,6 @@
 import React from "react"
 import styles from "./index.module.scss"
-import logo from "../../assets/logo.svg"
+import logo from "../../assets/Logo.svg"
 import logoWhite from "../../assets/logo/Logo-white.svg"
 
 export default function Logo({ className, inverted = "false" }) {
