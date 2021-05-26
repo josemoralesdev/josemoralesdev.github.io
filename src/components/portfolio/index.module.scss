@@ -13,6 +13,7 @@
   }
 }
 .portfolio {
+  max-width: 1024px;
   .portfolioHeader {
     max-width: 80vw;
   }
@@ -20,9 +21,10 @@
     margin-top: 5em;
     .projectsGrid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(250px, 250px));
       justify-items: center;
-      gap: 1em 0em;
+      justify-content: center;
+      gap: 3em;
       .projectCard {
         max-width: 400px;
         width: 100%;
