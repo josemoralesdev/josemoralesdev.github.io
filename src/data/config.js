@@ -8,7 +8,7 @@ import LinkedIn from "../assets/icons/linkedin.jsx"
 // Images
 //import CreateImage from '../assets/images/create.png'
 // Illustrations
-//import IdeaSVG from '../assets/illustrations/idea.svg'
+import IdeaSVG from '../assets/illustrations/idea.svg'
 
 export const HeaderData = {
     logo: '../assets/logo/logo.svg',
@@ -137,7 +137,7 @@ export const ContactData = {
     section: 'contact',
     title: 'have a project in mind ?',
     subtitle: 'you can contact me through my  email, social media, or by filling the next form:',
-    //illustration: `${IdeaSVG}`,
+    illustration: `${IdeaSVG}`,
 }
 export const FooterData = {
     section: 'footer',
