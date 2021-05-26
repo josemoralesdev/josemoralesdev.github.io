@@ -4,20 +4,14 @@ import Banner from "../banner/banner"
 import style from "./index.module.scss"
 import Form from "../form"
 
-export default function Contact() {
-  const {
-    section,
-    title,
-    subtitle,
-    //   illustration
-  } = ContactData
+export const Contact = () => {
+  const { section, title, subtitle, illustration } = ContactData
   return (
     <>
       <section id={section} className={style.contact}>
         <Banner direction="up" position="left" text="contact" />
         <h2 className={style.title}>{title}</h2>
         <p className={style.subtitle}>{subtitle}</p>
-        {/*
         <div className={style.leftColumn}>
           <img
             className={style.illustration}
@@ -27,7 +21,6 @@ export default function Contact() {
             srcSet=""
           />
         </div>
-         */}
         <div className={style.rightColumn}>
           <Form />
         </div>
