@@ -10,9 +10,9 @@ projectType: "Mobile"
 ![](../assets/images/projects/focustime/main-screen.png)
 ## Overview
 ---
-Este projecto fue creado en conjunto con el curso en udemy [**Complete React Native in 2021: Zero To Mastery**](https://www.udemy.com/course/complete-react-native-mobile-development-zero-to-mastery-with-hooks/) impartido por **Andrei Neagoie** - *Senior Software Developer* & **Mo Binni** - *Software / Solutions Architect*.
+This project was created altogether with the udemy course: [**Complete React Native in 2021: Zero To Mastery**](https://www.udemy.com/course/complete-react-native-mobile-development-zero-to-mastery-with-hooks/) taught by **Andrei Neagoie** - *Senior Software Developer* & **Mo Binni** - *Software / Solutions Architect*.
 
-Este projecto tiene como fin, enseñar diferentes funcionalidades de React native tales como:
+This project has the goal of teaching different React Native functionalities such as:
 
 - Components
 - Importing & exporting components
@@ -21,26 +21,28 @@ Este projecto tiene como fin, enseñar diferentes funcionalidades de React nativ
 - Data persistance (AsyncStorage)
 - Scalable project structure
 
-Es una aplicacion sencilla donde el usuario ingresa una tarea para enfocarse en ella y elegir entre diferentes tiempos para comenzar un conteo. Al finalizar el celular vibra para indicar que se ha agotado el tiempo.
+A simple app where the user enters a task which wants to focus on, and choose between different times to start the timer. When the timer finish, the app will make the phone vibrate to indicate the time has finished.
 
 ## How it works
 ---
-Al entrar a la aplicación, el usuario encontrara una pantalla simple, con un campo para poner la "tarea" en la que desea enfocarse por determinado tiempo. Al llenar este campo, se pulsa el boton para comenzar el conteo.
+When entering the app, the user finds a simple screen: the app title and an input field for filling a task in which wants to focus on for an amount of time. When filling this field, the user presses the button (+) to start the countdown.
 
-Esto nos llevara a la siguiente pantalla, la cual nos muestra diferentes componentes:
-- Contador
-- Titulo de la tarea
-- Barra de progreso
-- Botones
+This will take us to the next screen, in which shows us different components:
+- Counter
+- Task title
+- Progress Bar
+- Control buttons
 
-En esta pantalla, podemos ver el progreso de la tarea, asi como tambien pausar, reanudar o bien, modificar el tiempo que se quiere dedicar a la tarea. Tambien es posible cancelar prematuramente la tarea con el boton X.
+In this screen, we can see the progress of the task, we can also pause, resume or change the time we want for the task. It is possible to prematurely cancel the task with the X button.
 
-Al finalizar el contador, el celular vibrara algunos segundos para indicar que la tarea ha sido finalizada. Y mostrara en la pantalla principal un listado de tareas; en color verde las terminadas y en color rojo las incompletas.
+When the countdown finishes, the phone will vibrate for a few seconds indicating the task has been finished. And will show in the home screen a listing of past tasks; green tasks indicates the task was done properly & the red ones were cancelled prematurely.
 
-Al salir de la app, la lista de tareas quedara guardada, aun asi, el usuario tiene la opcion de limpiar la lista con un boton "Clear".
+When exiting the app, the task list will still be stored & the user has the option of clearing the list with the "Clear" button.
 
 ## Preview
-![Incomplete](../assets/images/projects/focustime/incomplete-task.gif)
+<div align="center">
+  <img src="../assets/images/projects/focustime/incomplete-task.gif">
+</div>
 
 ---
-*Código fuente en [Github](https://github.com/josemoralesdev/focustime.git)*
+*[Source code available](https://github.com/josemoralesdev/focustime.git)*
