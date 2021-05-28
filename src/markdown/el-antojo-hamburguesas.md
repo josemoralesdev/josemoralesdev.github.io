@@ -1,13 +1,13 @@
 ---
 path: "/projects/el-antojo-project"
 author: "Jose E. Morales"
-date: "07/2020"
-title: "Project: El Antojo"
-image: ../assets/images/projects/el-antojo-project.PNG
+date: "2020-07-12T00:00:00"
+title: "El Antojo"
+image: ../assets/images/projects/elantojo/home-screen.png
 projectType: "Web"
 ---
 # El Antojo Hamburguesas
-![](../assets/images/projects/el-antojo-project.PNG)
+![](../assets/images/projects/elantojo/home-screen.png)
 ## Overview
 ---
 Este proyecto fue creado con el fin de ayudar a negocios locales a tener su propia aplicacion web (menu digital) en la cual puedan mostrar a sus clientes su menu, productos y precios mas recientes.
@@ -29,4 +29,9 @@ Dentro del menu digital, los clientes pueden ver los platillos, seleccionar los 
 -  Al estar satisfecho con su lista de ordenes, el cliente llena un pequeño formulario con su nombre, notas para su orden y modalidad de entrega (recoger en negocio o domicilio).
 -  La lista de ordenes se envia directamente al Whatsapp del administrador del negocio.
 
-Este proyecto fue creado con [**React**](https://reactjs.org) y [**Google Spreasheets**](https://google.com)
+## Preview 
+![](../assets/images/projects/elantojo/demo-ordering.gif)
+
+Este proyecto fue creado con [**React**](https://reactjs.org) y [**Google Spreadsheets**](http://spreadsheets.google.com/)
+
+*Código fuente no disponible.*
