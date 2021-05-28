@@ -7,7 +7,7 @@ export default function Button({
   value = null,
 }) {
   const isPrimary = type === "primary" ? styles.primary : styles.default
-  const center = isCentered === "yes" ? styles.center : null
+  const center = isCentered ? styles.center : null
   return (
     <>
       <button className={`${isPrimary} ${center}`} value={value}>
