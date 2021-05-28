@@ -6514,6 +6514,20 @@ gatsby-recipes@^0.9.3:
     xstate "^4.9.1"
     yoga-layout-prebuilt "^1.9.6"
 
+gatsby-remark-copy-linked-files@^4.3.0:
+  version "4.3.0"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-copy-linked-files/-/gatsby-remark-copy-linked-files-4.3.0.tgz#0cb7102e4f42d97de5fd7d2701f373b06354ed1c"
+  integrity sha512-51dTUrEyLreeIHDra0kNJy33otbCSmjJoXDSi+uXP7pLmF+7NSK9ZUY0PY0wM/qzssiEIr3BmGZK+aoNMLnz8w==
+  dependencies:
+    "@babel/runtime" "^7.12.5"
+    cheerio "^1.0.0-rc.9"
+    fs-extra "^8.1.0"
+    is-relative-url "^3.0.0"
+    lodash "^4.17.21"
+    path-is-inside "^1.0.2"
+    probe-image-size "^6.0.0"
+    unist-util-visit "^2.0.3"
+
 gatsby-remark-images@^5.2.1:
   version "5.2.1"
   resolved "https://registry.yarnpkg.com/gatsby-remark-images/-/gatsby-remark-images-5.2.1.tgz#6ab97ef336cc26b00f6f125f5c193651787a7682"
