@@ -1,16 +1,15 @@
 import React from "react"
+import { graphql, useStaticQuery } from "gatsby"
 import { ProjectsData } from "../../data/config"
 import Banner from "../banner/banner"
 import style from "./index.module.scss"
-import { graphql, useStaticQuery } from "gatsby"
 import ProjectList from "../projectList"
-import { ProjectCategoryList } from "../projectCategoryList"
 
 export const Portfolio = () => {
   const { section, title } = ProjectsData
   const data = useStaticQuery(graphql`
     {
-      allMarkdownRemark {
+      allMarkdownRemark(sort: { fields: frontmatter___date, order: DESC }) {
         nodes {
           frontmatter {
             title
@@ -20,7 +19,12 @@ export const Portfolio = () => {
             projectType
             image {
               childImageSharp {
-                fluid(maxWidth: 500, srcSetBreakpoints: [250, 350, 450, 500]) {
+                fluid(
+                  maxWidth: 300
+                  maxHeight: 300
+                  srcSetBreakpoints: [250, 350, 400, 500]
+                  cropFocus: NORTH
+                ) {
                   ...GatsbyImageSharpFluid
                   ...GatsbyImageSharpFluidLimitPresentationSize
                 }
@@ -34,25 +38,27 @@ export const Portfolio = () => {
   const {
     allMarkdownRemark: { nodes: projects },
   } = data
-
   const projectTypes = new Set(
     projects.map(({ frontmatter }) => frontmatter.projectType)
   )
   const renderProjectTypes = [...projectTypes]
-  console.log(renderProjectTypes)
+
   return (
     <>
       <section className={style.portfolio} id="projects">
         <Banner direction="down" position="right" text={section} />
         <h2 className={style.portfolioHeader}>{title}</h2>
         <div className={style.projects}>
-          <div className={style.projectsCategoryRow}>
-            {renderProjectTypes.length > 0 &&
+          {/* <div className={style.projectsCategoryRow}>
+            {renderProjectTypes.length &&
               renderProjectTypes.map(category => {
-                console.log(category)
-                return <div className={style.category}>{category}</div>
+                return (
+                  <div key={`category:${category}`} className={style.category}>
+                    {category}
+                  </div>
+                )
               })}
-          </div>
+          </div> */}
           <div className={style.projectsGrid}>
             <ProjectList projects={projects} />
           </div>
