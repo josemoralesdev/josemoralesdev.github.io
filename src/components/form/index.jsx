@@ -35,7 +35,7 @@ export default function Form() {
           type="text"
           name="name"
           defaultValue=""
-          placeholder="Your name"
+          placeholder="Type your name"
           ref={register({ required: true, minLength: 3 })}
         />
         {errors.name && errors.name.type === "required" && (
@@ -56,7 +56,7 @@ export default function Form() {
           type="text"
           name="subject"
           defaultValue=""
-          placeholder="Subject"
+          placeholder="Type a subject"
           ref={register({ required: true, minLength: 5 })}
         />
         {errors.subject && errors.subject.type === "required" && (
@@ -77,7 +77,7 @@ export default function Form() {
           className="emailInput"
           name="email"
           defaultValue=""
-          placeholder="Your email"
+          placeholder="Type your email"
           ref={register}
         />
         {errors.email && errors.email.type === "email" && (
@@ -97,7 +97,7 @@ export default function Form() {
           cols="30"
           rows="10"
           ref={register({ required: true, minLength: 10 })}
-          placeholder="Message here..."
+          placeholder="Type your message"
         ></textarea>
         {errors.message && errors.message.type === "required" && (
           <p className={style.errorMessage}>↑ This field is required!</p>
