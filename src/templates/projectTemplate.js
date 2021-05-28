@@ -1,18 +1,31 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Layout } from "../components/layout";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 import SEO from "../components/seo";
+import Button from "../common/button";
 
 export default function Template({ data }) {
   const { markdownRemark } = data;
   const { frontmatter, html } = markdownRemark;
+  const { author, date, title } = frontmatter;
+
+  const formatDate = (date) => {
+    const dateString = new Date(date);
+    let day = dateString.getDay();
+    let year = dateString.getFullYear();
+
+    return `${day}/${year}`
+  }
   return (
     <Layout>
-      <SEO title={frontmatter.title} />
+      <SEO title={title} />
       <section style={{ minHeight: "100vh", maxWidth: "1024px" }}>
         <div dangerouslySetInnerHTML={{ __html: html }} />
-        <div>Author: {frontmatter.author}</div>
-        <div>Date: {frontmatter.date}</div>
+        <div>Author: {author}</div>
+        <div>Date: {formatDate(date)}</div>
+        <Link to="/#projects">
+          <Button text="Go back" type="primary" isCentered="yes" />
+        </Link>
       </section>
     </Layout>
   )
