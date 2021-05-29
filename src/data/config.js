@@ -15,7 +15,7 @@ export const HeaderData = {
     navLinks: ['home', 'about', 'services', 'projects', 'contact'],
 }
 export const HomeData = {
-    section: 'Home',
+    section: 'home',
     greeting: 'Hi, my name is Jose E. Morales',
     role: 'I\'m a software engineer',
     image: '',
