@@ -15,12 +15,12 @@ export const HeaderData = {
     navLinks: ['home', 'about', 'services', 'projects', 'contact'],
 }
 export const HomeData = {
-    section: 'home',
-    greeting: 'hi, my name is Jose E. Morales',
-    role: 'i\'m a software engineer',
+    section: 'Home',
+    greeting: 'Hi, my name is Jose E. Morales',
+    role: 'I\'m a software engineer',
     image: '',
-    callToAction: 'download cv',
-    defaultAction: 'see more',
+    callToAction: 'Contact',
+    defaultAction: 'View more',
     socialLinks: {
         email: {
             id: '1',
@@ -44,7 +44,7 @@ export const HomeData = {
             id: '4',
             name: 'Linkedin',
             icon: <LinkedIn />,
-            url: 'https://www.linkedin.com/in/eduardomorales-dev/'
+            url: 'https://www.linkedin.com/in/josemoralesdev/'
         },
         messenger: {
             id: '5',
@@ -58,8 +58,8 @@ export const AboutData = {
     section: 'about',
     //image: `${CreateImage}`,
     textOne: 'Ever since I was a child, I\'ve been passionate about problem solving and the tech world. Today I find myself developing creative solutions in the software industry, keeping in mind the quality of my work and trying to learn a little  bit more every day.',
-    textTwo: 'graduated from instituto tecnologico de sonora (itson) on the year 2015-2019.',
-    textThree: 'i’ve been working as a freelance since then, some of my projects involves desktop  & web apps development.'
+    textTwo: 'Graduated from instituto tecnologico de sonora (itson) on the year 2015-2019.',
+    textThree: 'I’ve been working as a freelance since then, some of my projects involves desktop, web apps & mobile development.'
 }
 export const ServicesData = {
     section: 'services',
@@ -67,46 +67,47 @@ export const ServicesData = {
         id: '1',
         icon: '../assets/icons/...',
         serviceTitle: {
-            title: 'design',
-            text: 'i like to keep things clean & simple'
+            title: 'Design',
+            text: 'I like to keep things clean & simple'
         },
         serviceSubtitle: {
-            title: 'thinks i enjoy designing',
-            text: ['websites, web apps, mobile apps']
+            title: 'Things i enjoy designing',
+            text: ['Websites, web apps, mobile apps']
         },
         servicesTools: {
-            title: 'design tools',
-            text: ['figma', 'pen & paper']
+            title: 'Design tools',
+            text: ['Figma']
         }
     },
     serviceTwo: {
         id: '2',
         icon: '../assets/icons/...',
         serviceTitle: {
-            title: 'development',
-            text: 'i love to code ideas & bring them to real life solutions'
+            title: 'Development',
+            text: 'I love to code ideas & bring them to real life solutions'
         },
         serviceSubtitle: {
-            title: 'technologies i\'ve worked with',
+            title: 'Technologies i\'ve worked with',
             text: [
                 'HTML5',
                 'CSS3',
                 'JS',
                 'React',
+                'React Native',
                 'C#',
                 'Java',
                 'SQL'
             ]
         },
         servicesTools: {
-            title: 'dev tools',
-            text: ['git', 'github', 'vim', 'vscode', 'terminal']
+            title: 'Dev tools',
+            text: ['Git', 'Github', 'Vim', 'VSCode', 'Terminal']
         },
     }
 }
 export const ProjectsData = {
     section: 'projects',
-    title: 'some of the projects i\'ve developed',
+    title: 'Some of the projects i\'ve developed',
     projectsGrid: {
         categories: ['all', 'web app', 'website', 'android', 'desktop'],
         projects: {
@@ -135,12 +136,11 @@ export const ProjectsData = {
 }
 export const ContactData = {
     section: 'contact',
-    title: 'have a project in mind ?',
-    subtitle: 'you can contact me through my  email, social media, or by filling the next form:',
+    title: 'Have a project in mind ?',
+    subtitle: 'You can contact me through my  email, social media, or by filling the next form:',
     illustration: `${IdeaSVG}`,
 }
 export const FooterData = {
     section: 'footer',
     copyright: `© ${new Date().getFullYear()} José E. Morales`
-
 }
