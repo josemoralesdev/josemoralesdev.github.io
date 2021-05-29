@@ -9,36 +9,38 @@ projectType: "Mobile"
 # MealsToGo
 ![](../assets/images/projects/mealstogo/main-screen.png)
 ## Overview
-Este projecto fue creado en conjunto con el curso en udemy [**Complete React Native in 2021: Zero To Mastery**](https://www.udemy.com/course/complete-react-native-mobile-development-zero-to-mastery-with-hooks/) impartido por **Andrei Neagoie** - *Senior Software Developer* & **Mo Binni** - *Software / Solutions Architect*.
-Este projecto tiene como fin, enseñar diferentes funcionalidades avanzadas de React native tales como:
+---
+This project was created altogether with the udemy course: [**Complete React Native in 2021: Zero To Mastery**](https://www.udemy.com/course/complete-react-native-mobile-development-zero-to-mastery-with-hooks/) taught by **Andrei Neagoie** - *Senior Software Developer* & **Mo Binni** - *Software / Solutions Architect*.
+This project has the goal of teaching advanced functionalities of React Native such as:
 
 - Hooks (useRef, useContext, useState).
 - React Native Hooks (useFocusEffect).
 - Styled Components.
 - Theming.
 - Custom Fonts.
-- React Native Navigation.
-- Google Maps API.
-- Geolocation API.
+- Navigation.
 - Expo Maps Integration.
+- Google Maps & Geolocation API.
 - AsyncStorage.
 - Animations.
-- Firebase Authentication.
-- Firebase Cloud Functions.
+- Firebase Authentication & Cloud Functions.
 - Error & loading Handling.
 - Expo Camera Module.
 - Stripe payments API.
 
-Es una aplicación media-avanzada que requiere un mayor conocimiento en distintas areas de React Native.
+It is a medium-advanced application that requires more than beginner knowledge in React Native.
 ## How it works
-La pantalla de inicio nos da a elegir si queremos registrarnos o ingresar con nuestra cuenta; en caso de no tener una cuenta seleccionamos crear cuenta y llenamos los datos correspondientes. Al hacerlo nos redireccionara a la app.
+---
+The main screen shows us two options, login in, of signing in, if we don't have an account, we can easily create one pressing on the register button & filling the form. When we are done it will redirect us to the app.
+If we already have an account, we just fill the login form & it will redirect us to the app if the login information is correct.
 
-Dentro de la pestana principal podemos ver informacion de una variedad de restaurantes cercanos a nosotros. Podemos cambiar la localizacion en el recuadro superior para mostrar otros lugares.
-En las "cartas" de restaurantes podemos hacer clic para mostrar mas informacion y tambien podemos agregarlo a la lista de favoritos.
+Inside the home tab, we can see information about a variety of nearby restaurants. We can change the location in the top input field to search other places.
+In the restaurants cards listing we can press on them to view detailed information & we can add the restaurant to our favorite restaurants list.
 
-En la pestaña de **Map** podemos encontrar el mapa de nuestra localizacion y nos mostrara la direccion de los restaurantes. Podemos hacer clic en el recuadro de los pines para ver informacion detallada de cada restaurante.
+In the **Map** tab, we can find a map on our location, it'll show nearby restaurants. We can press on a map location pin to see more information about each restaurant.
 
-La aplicacion tambien cuenta con una pestaña de **Settings** donde podemos agregar una foto desde la cámara frontal, ver nuestros restaurantes favoritos o cerrar nuestra sesión.
-## Preview 
+The app also has a **Settings** tab, where we can add a profile picture from our frontal camera, view our favorite restaurants & signing out of the app.
 
-Este proyecto fue creado con [React Native](https://reactnative.dev/).
+This project was created with **React Native**.
+
+*Source code not available at the moment.*

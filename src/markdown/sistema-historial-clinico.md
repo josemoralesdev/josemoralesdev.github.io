@@ -1,34 +1,37 @@
 ---
 path: "/projects/sistema-historial-clinico"
 author: "Jose E. Morales"
-date: "2019-02-07T00:00:00"
+date: "2019-02-14T00:00:00"
 title: "Sistema Historial Clinico"
 image: ../assets/images/projects/historialclinico/login-screen.png
 projectType: "Desktop"
 ---
+# Sistema Historial Clínico
+![](../assets/images/projects/historialclinico/login-screen.png)
 ## Overview
 ---
-Aplicación de escritorio creada para un pequeño consultorio médico. 
+Desktop application created for a doctor's office.
 
-Una de las problematicas que se encontraban, es que no existia una forma eficiente para guardar los historiales clinicos de los pacientes; anteriormente se realizaba de forma escrita, pero esto significaba que despues de cada consulta el médico tenia que imprimir formularios, llenarlosl y almacenarlos, un proceso tedioso y el cual no siempre se lograba si habia gente en espera.
+One of the problems was, it didn't existed an efficient way for storing medical histories from the patients; before, medical histories were stored in a written way, but this mean, after every medical check, the doctor had to print, fill y later on store medical histories forms. It is a tedious process & it wasnt possible if the doctor had multiple patients waiting.
 
-La solucion propuesta fue crear un programa de escritorio en el cual el médico pudiese manejar con facilidad y guardar la informacion de sus pacientes de forma digital en una base de datos dentro de su computador. Esto hizo mas rapido el proceso de guardar la informacion y tener esa informacion siempre al alcance cuando se necesite.
+The proposed solution was to create a desktop app in which the doctor could easily use & save his patients information in a digital way, all of this inside a database in his computer. This made the process of saving the information faster & having this information in his reach, even better.
 
 ## How it works
 ---
-El usuario ejecuta el acceso directo al programa desde su escritorio para poder acceder a la aplicacion, aparecera una ventana para iniciar sesion con sus credenciales y entrar al sistema.
+The user executes the application shortcut from the desktop to access the application, then it will show a window for login in with his credentials and therefore, access the system.
 
-Dentro del sistema el usuario puede guardar nuevos pacientes para posteriormente crear sus respectivos historiales clinicos.
+Inside the system, the user can save new patients & later on create their respectives medical histories.
 
-En el apartado de **Pacientes**, le aparecerá una lista de todos sus pacientes actuales y un filtro arriba de la lista, en el cual puede buscar el nombre de cualquier paciente.
-Al dar doble click en el listado del paciente o eligiendo al paciente y el boton de "mostrar", se podra visualizar la informacion personal del paciente.
-En este mismo apartado se puede modificar, eliminar o agregar nuevos pacientes.
+In the **Patients** module, it displays a listing with all of the patients information, and an input field on the top for filtering patients.
+When double clicking on the desired patient listing or choosing a listing and clicking on the button "Show", the user can visualize the patient's information.
+In this module, the user can view, modify, create or delete new patients.
 
-En el modulo de historial clinico, se muestra un listado de historiales clinicos con su respectivo campo para filtrar los historiales por pacientes.
-Al dar doble clic en el listado deseado, se podra visualizar de mejor forma toda la historia clinica de la persona.
-En este apartado se puede ver, modificar, eliminar o agregar historiales clinicos a pacientes **existentes**.
+In the Clinical history module, it shows a list of all the medical histories with an input field on the top for filtering the medical histories.
+
+When double clicking a desired listing, it will display all the information on a bigger window, so the user can clearly see all of the information.
+In this module, the user can view, modify, create or delete medical histories from **existing patients in the database**
 
 ---
-Este proyecto fue creado  con  **C#** & **SQL Server Express**.
+This project was created using **C#** & **SQL Server Express**.
 
-*Código fuente no disponible*
+*Source code not available*.
