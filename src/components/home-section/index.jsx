@@ -3,9 +3,8 @@ import { HomeData } from "../../data/config.js"
 import Styles from "./index.module.scss"
 import SocialList from "../social-list"
 import Button from "../../common/button"
-import Resume from "../../assets/files/Resume.pdf"
 import Img from "gatsby-image"
-import { graphql, useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery, Link } from "gatsby"
 
 export default function HomeSection() {
   const data = useStaticQuery(graphql`
@@ -38,12 +37,12 @@ export default function HomeSection() {
             <p className={Styles.greeting}>{greeting}</p>
             <p className={Styles.role}>{role}</p>
             <div className={Styles.buttonRow}>
-              <a href="#about">
+              <Link to="/#about">
                 <Button type="default" text={defaultAction} />
-              </a>
-              <a href={Resume} download target="_blank" rel="noreferrer">
+              </Link>
+              <Link to="/#contact">
                 <Button type="primary" text={callToAction} />
-              </a>
+              </Link>
             </div>
             <SocialList />
           </div>
