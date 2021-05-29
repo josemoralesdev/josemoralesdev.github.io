@@ -16,20 +16,20 @@ export default function Services() {
           <Card
             iconsrc={DesignIcon}
             headerTitle="Design"
-            headerText="i like to keep things clean & simple"
-            descriptionTitle="things i enjoy designing"
-            descriptionText="websites, web apps, mobile apps"
-            toolsTitle="design tools"
-            toolsText="figma, pen & paper"
+            headerText="I like to keep things clean & simple"
+            descriptionTitle="Things i enjoy designing"
+            descriptionText="Websites, web apps, mobile apps"
+            toolsTitle="Design tools"
+            toolsText="Figma"
           />
           <Card
             iconsrc={ComputerIcon}
             headerTitle="Development"
-            headerText="i love to code ideas & bring them to real life solutions"
-            descriptionTitle="technologies i've worked with"
-            descriptionText="HTML5, CSS3, JS, React,C#, Java, SQL"
-            toolsTitle="dev tools"
-            toolsText="git, github, vscode, vim, terminal"
+            headerText="I love to code ideas & bring them to real life solutions"
+            descriptionTitle="Technologies I've worked with"
+            descriptionText="HTML5, CSS3, JS, React, React Native, C#, Java, SQL"
+            toolsTitle="Dev tools"
+            toolsText="Git, Github, VSCode, Vim, Terminal"
           />
         </div>
       </section>
