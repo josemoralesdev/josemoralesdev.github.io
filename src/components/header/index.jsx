@@ -22,23 +22,25 @@ export default function Header() {
   return (
     <>
       <header style={style.header}>
-        <Logo />
-        <nav>
-          <ul
+        <div className={style.wrapper}>
+          <Logo />
+          <nav>
+            <ul
+              onClick={() => setClicked(!clicked)}
+              className={`${isClicked} ${style.linkList}`}
+            >
+              <NavLinks />
+            </ul>
+          </nav>
+          <button
             onClick={() => setClicked(!clicked)}
-            className={`${isClicked} ${style.linkList}`}
+            aria-label="Navigation Button"
           >
-            <NavLinks />
-          </ul>
-        </nav>
-        <button
-          onClick={() => setClicked(!clicked)}
-          aria-label="Navigation Button"
-        >
-          <div className={`${style.hamMenu} ${isActive}`}>
-            <div></div>
-          </div>
-        </button>
+            <div className={`${style.hamMenu} ${isActive}`}>
+              <div></div>
+            </div>
+          </button>
+        </div>
       </header>
     </>
   )
