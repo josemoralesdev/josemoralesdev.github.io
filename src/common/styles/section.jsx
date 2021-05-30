@@ -6,6 +6,7 @@ export const Section = styled.section`
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-variant: small-caps;
   margin: 0 auto 5.769em;
+  max-width: ${props => props.theme.maxWidth};
   padding: 5.769em 16px;
   @media (min-width: 768px) {
     padding: 95px 2rem;
