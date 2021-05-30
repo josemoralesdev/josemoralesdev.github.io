@@ -105,7 +105,7 @@ export const Home = () => {
   `)
   return (
     <>
-      <SectionHome>
+      <SectionHome id="home">
         <Wrapper>
           <ProfilePicture>
             <Img
