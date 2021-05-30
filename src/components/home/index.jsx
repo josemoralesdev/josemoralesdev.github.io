@@ -73,8 +73,10 @@ const Wrapper = styled.div`
 `
 const ProfilePicture = styled.div`
   width: 100%;
+  height: 100%;
   @media ${devices.tablet} {
     order: 2;
+    align-self: center;
     flex: 1;
     margin-left: 2em;
   }
