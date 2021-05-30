@@ -6,6 +6,7 @@ import SocialList from "../social-list"
 import { HomeData } from "../../data/config.js"
 import { graphql, useStaticQuery, Link } from "gatsby"
 import { Section } from "../../common/styles/section"
+import { devices } from "../../theme/breakpoints"
 
 const Role = styled.p`
   margin-top: 0;
@@ -14,7 +15,7 @@ const Role = styled.p`
   font-style: normal;
   font-weight: 300;
   letter-spacing: 0.2em;
-  @media (min-width: 1024px) {
+  @media ${devices.desktop} {
     margin: 0;
   }
 `
@@ -25,10 +26,10 @@ const Greeting = styled.p`
   line-height: 34px;
   letter-spacing: 0.2em;
   text-align: left;
-  @media (min-width: 768px) {
+  @media ${devices.tablet} {
     margin-top: 0;
   }
-  @media (min-width: 1024px) {
+  @media ${devices.desktop} {
     margin: 0;
   }
 `
@@ -38,7 +39,7 @@ const ButtonRow = styled.div`
   justify-content: space-between;
   width: 100%;
   margin-bottom: 2.857em;
-  @media (min-width: 1024px) {
+  @media ${devices.desktop} {
     margin: 0;
     justify-content: flex-start;
     > a {
@@ -47,7 +48,7 @@ const ButtonRow = styled.div`
       }
     }
   }
-  @media (min-width: 1440px) {
+  @media ${devices.desktopL} {
     > a {
       &:last-child {
         margin-left: 5.5em;
@@ -64,16 +65,15 @@ const Wrapper = styled.div`
   justify-content: center;
   margin: 0 auto;
   max-width: 1024px;
-  @media (min-width: 768px) {
+  @media ${devices.tablet} {
     display: flex;
     flex-flow: row nowrap;
   }
-  @media (min-width: 1024px) {
   }
 `
 const ProfilePicture = styled.div`
   width: 100%;
-  @media (min-width: 768px) {
+  @media ${devices.tablet} {
     order: 2;
     flex: 1;
     margin-left: 2em;
@@ -82,14 +82,14 @@ const ProfilePicture = styled.div`
 const ProfileInformation = styled.div`
   order: 1;
   flex: 1;
-  @media (min-width: 1024px) {
+  @media ${devices.desktop} {
     display: flex;
     flex-flow: column;
     justify-content: space-between;
   }
 `
 export const Home = () => {
-  const { greeting, role, defaultAction, callToAction } = HomeData
+  const { section, greeting, role, defaultAction, callToAction } = HomeData
   const data = useStaticQuery(graphql`
     query ProfilePicture {
       file(relativePath: { eq: "profile-picture.png" }) {
@@ -105,7 +105,7 @@ export const Home = () => {
   `)
   return (
     <>
-      <SectionHome id="home">
+      <SectionHome id={section}>
         <Wrapper>
           <ProfilePicture>
             <Img

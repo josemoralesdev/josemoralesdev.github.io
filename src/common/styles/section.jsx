@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { devices } from "../../theme/breakpoints"
 
 export const Section = styled.section`
   text-transform: lowercase;
@@ -8,7 +9,10 @@ export const Section = styled.section`
   margin: 0 auto 5.769em;
   max-width: ${props => props.theme.maxWidth};
   padding: 5.769em 16px;
-  @media (min-width: 768px) {
+  @media ${devices.tablet} {
     padding: 95px 2rem;
+  }
+  @media ${devices.desktopL} {
+    padding: 95px 0;
   }
 `
