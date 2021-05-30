@@ -1,39 +1,15 @@
-.projectsCategoryRow {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  .category {
-    font-size: 0.8571em;
-    &:not(:first-child) {
-      margin-left: 15px;
-    }
-    &:not(:last-child) {
-      margin-right: 15px;
-    }
-  }
-}
-.portfolio {
-  max-width: 1024px;
-  .portfolioHeader {
-    max-width: 80vw;
-  }
-  .projects {
-    margin-top: 5em;
-    .projectsGrid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 250px));
-      justify-items: center;
-      justify-content: center;
-      gap: 3em;
-      .projectCard {
-        max-width: 400px;
-        width: 100%;
-        margin: 0 auto;
-        .projectImage {
-          width: 100%;
-          height: auto;
-        }
-      }
-    }
-  }
-}
+// TODO: Create projects page displaying projects with a filter.
+// .projectsCategoryRow {
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: space-between;
+//   .category {
+//     font-size: 0.8571em;
+//     &:not(:first-child) {
+//       margin-left: 15px;
+//     }
+//     &:not(:last-child) {
+//       margin-right: 15px;
+//     }
+//   }
+// }
