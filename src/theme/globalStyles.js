@@ -12,6 +12,7 @@ export const GlobalStyle = createGlobalStyle`
   --font-family: Roboto, sans-serif;
   --letter-spacing: 0.1em;
   --header-height: 75px;
+  --max-width: 1024px;
 }
 * {
   box-sizing: border-box;
