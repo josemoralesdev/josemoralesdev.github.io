@@ -4,15 +4,28 @@ import Banner from "../banner/banner"
 import Card from "../card"
 import ComputerIcon from "../../assets/icons/computer-icon.svg"
 import DesignIcon from "../../assets/icons/design-icon.svg"
-import styles from "./index.module.scss"
+import { Section } from "../../common/styles/section"
+import styled from "styled-components"
+import { devices } from "../../theme/breakpoints"
 
-export default function Services() {
+const CardWrapper = styled.div`
+  max-width: ${props => props.theme.maxWidth};
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0 auto;
+  justify-content: space-evenly;
+  @media ${devices.desktop} {
+    gap: 1.5em;
+  }
+`
+
+export const Services = () => {
   const { section } = ServicesData
   return (
     <>
-      <section id={section} className={styles.services}>
+      <Section id={section}>
         <Banner text={section} direction="up" />
-        <div className={styles.cardWrapper}>
+        <CardWrapper>
           <Card
             iconsrc={DesignIcon}
             headerTitle="Design"
@@ -31,8 +44,8 @@ export default function Services() {
             toolsTitle="Dev tools"
             toolsText="Git, Github, VSCode, Vim, Terminal"
           />
-        </div>
-      </section>
+        </CardWrapper>
+      </Section>
     </>
   )
 }
