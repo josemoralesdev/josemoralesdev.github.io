@@ -1,5 +1,7 @@
 import React from 'react'
 // Icons
+import ComputerIcon from "../assets/icons/computer-icon.svg"
+import DesignIcon from "../assets/icons/design-icon.svg"
 import Messenger from "../assets/icons/messenger.jsx"
 import Email from "../assets/icons/email.jsx"
 import Github from "../assets/icons/github.jsx"
@@ -12,7 +14,7 @@ import IdeaSVG from '../assets/illustrations/idea.svg'
 
 export const HeaderData = {
     logo: '../assets/logo/logo.svg',
-    navLinks: ['home', 'about', 'services', 'projects', 'contact'],
+    navLinks: ['home', 'about', 'skills', 'projects', 'contact'],
 }
 export const HomeData = {
     section: 'home',
@@ -61,32 +63,32 @@ export const AboutData = {
     textTwo: 'Graduated from instituto tecnologico de sonora (itson) on the year 2015-2019.',
     textThree: 'I’ve been working as a freelance since then, some of my projects involves desktop, web apps & mobile development.'
 }
-export const ServicesData = {
-    section: 'services',
-    serviceOne: {
+export const SkillsData = {
+    section: 'skills',
+    skillOne: {
         id: '1',
-        icon: '../assets/icons/...',
-        serviceTitle: {
+        icon: `${DesignIcon}`,
+        skillTitle: {
             title: 'Design',
             text: 'I like to keep things clean & simple'
         },
-        serviceSubtitle: {
+        skillSubtitle: {
             title: 'Things i enjoy designing',
             text: ['Websites, web apps, mobile apps']
         },
-        servicesTools: {
+        skillTools: {
             title: 'Design tools',
             text: ['Figma']
         }
     },
-    serviceTwo: {
+    skillTwo: {
         id: '2',
-        icon: '../assets/icons/...',
-        serviceTitle: {
+        icon: `${ComputerIcon}`,
+        skillTitle: {
             title: 'Development',
             text: 'I love to code ideas & bring them to real life solutions'
         },
-        serviceSubtitle: {
+        skillSubtitle: {
             title: 'Technologies i\'ve worked with',
             text: [
                 'HTML5',
@@ -99,7 +101,7 @@ export const ServicesData = {
                 'SQL'
             ]
         },
-        servicesTools: {
+        skillTools: {
             title: 'Dev tools',
             text: ['Git', 'Github', 'Vim', 'VSCode', 'Terminal']
         },
