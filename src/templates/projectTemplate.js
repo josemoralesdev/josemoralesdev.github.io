@@ -3,6 +3,36 @@ import { Layout } from "../components/layout";
 import { graphql, Link } from "gatsby";
 import SEO from "../components/seo";
 import Button from "../common/button";
+import './projectTemplate.scss'
+import { GlobalStyle } from "../theme/globalStyles"
+import { Section } from "../common/styles/section"
+import styled from "styled-components"
+
+const Markdown = styled.div`
+  h1{
+    margin: revert;
+  }
+  h2{
+    margin: revert;
+    margin-top: 1.5em;
+  }
+  img{
+  }
+  p{
+    font-size: 1.35em;
+    line-height: 1.75;
+    color: ${props => props.theme.colors.text.secondary}
+  }
+  li{
+    font-size: 1.2em;
+    line-height: 1.5;
+    color: ${props => props.theme.colors.text.secondary}
+  }
+`;
+const DateCreated = styled.small`
+  font-style: italic;
+  font-size: 1.2em;
+`;
 
 export default function Template({ data }) {
   const { markdownRemark } = data;
@@ -17,18 +47,24 @@ export default function Template({ data }) {
     return `${month}/${year}`
   }
   return (
-    <Layout>
-      <SEO title={title} />
-      <section style={{ minHeight: "100vh", maxWidth: "1024px" }}>
-        <div dangerouslySetInnerHTML={{ __html: html }} style={{ padding: "4em 0 0" }} />
-        {/* <div>Author - {author}</div> */}
-        <small style={{ padding: "0 0 2em", fontStyle: "italic", display: "block" }}>{formatDate(date)}</small>
-        <Link to="/#projects">
-          <Button text="Go back" type="primary" isCentered="yes" />
-        </Link>
-      </section>
-    </Layout>
+    <>
+      <GlobalStyle />
+      <Layout>
+        <SEO title={title} />
+        <Section>
+          <Markdown>
+            <div dangerouslySetInnerHTML={{ __html: html }} />
+          </Markdown>
+          <DateCreated>{formatDate(date)}</DateCreated>
+          <Link to="/#projects">
+            <Button text="Go back" type="primary" isCentered="yes" />
+          </Link>
+        </Section>
+      </Layout>
+    </>
   )
+
+
 }
 
 export const pageQuery = graphql`
