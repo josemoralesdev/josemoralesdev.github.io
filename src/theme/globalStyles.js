@@ -26,7 +26,7 @@ html{
     margin: 0;
   }
   h1 {
-    font-size: 2.125em;
+    font-size: 2.250em;
     font-weight: 400;
     letter-spacing: var(--letter-spacing);
     text-align: center;
