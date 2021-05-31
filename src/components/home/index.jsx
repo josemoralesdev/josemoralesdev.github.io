@@ -97,7 +97,11 @@ export const Home = () => {
       file(relativePath: { eq: "profile-picture.png" }) {
         id
         childImageSharp {
-          fluid(maxWidth: 500, srcSetBreakpoints: [250, 350, 450, 500]) {
+          fluid(
+            maxWidth: 500
+            srcSetBreakpoints: [250, 350, 450, 500]
+            quality: 70
+          ) {
             ...GatsbyImageSharpFluid
             ...GatsbyImageSharpFluidLimitPresentationSize
           }
