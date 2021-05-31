@@ -1,7 +1,6 @@
 import React from "react"
 import { AboutData } from "../../data/config"
 import Banner from "../banner/banner.jsx"
-import styles from "./index.module.scss"
 import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 import { Section } from "../../common/styles/section"
@@ -58,7 +57,9 @@ const AboutText = styled.p`
 `
 const RightColumn = styled.div`
   flex: 1;
-  margin: 0 2rem;
+  @media${devices.tablet} {
+    margin: 0 2rem;
+  }
   @media${devices.desktop} {
     margin: 0 3em 0 2em;
   }
@@ -75,6 +76,7 @@ export const About = () => {
             maxWidth: 500
             maxHeight: 500
             srcSetBreakpoints: [250, 350, 450, 500]
+            quality: 50
           ) {
             ...GatsbyImageSharpFluid
             ...GatsbyImageSharpFluidLimitPresentationSize
