@@ -7,7 +7,11 @@ image: ../assets/images/projects/focustime/main-screen.png
 projectType: "Mobile"
 ---
 # FocusTime
-![](../assets/images/projects/focustime/main-screen.png)
+
+<div>
+  <img src="../assets/images/projects/focustime/main-screen.png">
+</div>
+
 ## Overview
 ---
 This project was created altogether with the udemy course: [**Complete React Native in 2021: Zero To Mastery**](https://www.udemy.com/course/complete-react-native-mobile-development-zero-to-mastery-with-hooks/) taught by **Andrei Neagoie** - *Senior Software Developer* & **Mo Binni** - *Software / Solutions Architect*.
@@ -21,13 +25,14 @@ This project has the goal of teaching different React Native functionalities suc
 - Data persistance (AsyncStorage)
 - Scalable project structure
 
-A simple app where the user enters a task which wants to focus on, and choose between different times to start the timer. When the timer finish, the app will make the phone vibrate to indicate the time has finished.
+A simple app where the user enters a task which wants to focus on, and choose between different times to start a timer. When the timer ends, the app will make the phone vibrate to indicate the time has finished.
 
 ## How it works
 ---
 When entering the app, the user finds a simple screen: the app title and an input field for filling a task in which wants to focus on for an amount of time. When filling this field, the user presses the button (+) to start the countdown.
 
 This will take us to the next screen, in which shows us different components:
+
 - Counter
 - Task title
 - Progress Bar
@@ -45,4 +50,4 @@ When exiting the app, the task list will still be stored & the user has the opti
 </div>
 
 ---
-*[Source code available](https://github.com/josemoralesdev/focustime.git)*
+*Source code [available](https://github.com/josemoralesdev/focustime.git)*
