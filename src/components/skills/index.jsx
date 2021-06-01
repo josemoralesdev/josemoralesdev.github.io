@@ -29,6 +29,7 @@ export const Skills = () => {
       return skillListValues.map(skill => {
         return (
           <Card
+            key={skill.id}
             iconsrc={skill.icon}
             headerTitle={skill.skillTitle.title}
             headerText={skill.skillTitle.text}
@@ -45,28 +46,8 @@ export const Skills = () => {
   return (
     <>
       <Section id={section}>
-        <Banner text={section} direction="up" />
-        <CardWrapper>
-          {/* <Card
-            iconsrc={DesignIcon}
-            headerTitle="Design"
-            headerText="I like to keep things clean & simple"
-            descriptionTitle="Things i enjoy designing"
-            descriptionText="Websites, web apps, mobile apps"
-            toolsTitle="Design tools"
-            toolsText="Figma"
-          />
-          <Card
-            iconsrc={ComputerIcon}
-            headerTitle="Development"
-            headerText="I love to code ideas & bring them to real life solutions"
-            descriptionTitle="Technologies I've worked with"
-            descriptionText="HTML5, CSS3, JS, React, React Native, C#, Java, SQL"
-            toolsTitle="Dev tools"
-            toolsText="Git, Github, VSCode, Vim, Terminal"
-          /> */}
-          {/* {renderSkills()} */}
-        </CardWrapper>
+        <Banner text={`My ${section}`} direction="up" />
+        <CardWrapper>{renderSkills()}</CardWrapper>
       </Section>
     </>
   )
