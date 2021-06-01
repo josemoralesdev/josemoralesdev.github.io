@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react"
 import NavLinks from "../nav-links"
 import Logo from "../logo"
-import style from "./index.module.scss"
 import styled from "styled-components"
 import { devices } from "../../theme/breakpoints"
 

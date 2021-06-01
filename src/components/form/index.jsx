@@ -1,7 +1,6 @@
 import React, { useState } from "react"
 import { useForm } from "react-hook-form"
 import Button from "../../common/button"
-import style from "./index.module.scss"
 import styled from "styled-components"
 
 const FormStyled = styled.form`
@@ -72,7 +71,6 @@ export default function Form() {
   }
   return (
     <FormStyled
-      className={style.form}
       action={FORMSPREE_URL}
       method="POST"
       onSubmit={handleSubmit(onSubmit)}
@@ -146,12 +144,7 @@ export default function Form() {
           </ErrorMessage>
         )}
       </InputWrapper>
-      <Button
-        className={style.button}
-        isCentered="yes"
-        type="primary"
-        text="Submit"
-      />
+      <Button isCentered="yes" type="primary" text="Submit" />
       {formStatus && (
         <FormStatusMessage success>
           Your form was sent succesfully!

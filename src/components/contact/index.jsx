@@ -1,7 +1,6 @@
 import React from "react"
 import { ContactData } from "../../data/config"
 import Banner from "../banner/banner"
-import style from "./index.module.scss"
 import Form from "../form"
 import styled from "styled-components"
 import { Section } from "../../common/styles/section"
@@ -62,13 +61,7 @@ export const Contact = () => {
         <ContactTitle>{title}</ContactTitle>
         <ContactSubtitle>{subtitle}</ContactSubtitle>
         <LeftColumn>
-          <Illustration
-            className={style.illustration}
-            src={illustration}
-            width="300px"
-            alt=""
-            srcSet=""
-          />
+          <Illustration src={illustration} width="300px" alt="" srcSet="" />
         </LeftColumn>
         <RightColumn>
           <Form />
