@@ -1,9 +1,9 @@
 import React from "react"
-import { ServicesData } from "../../data/config"
-import Banner from "../banner/banner"
-import Card from "../card"
 import ComputerIcon from "../../assets/icons/computer-icon.svg"
 import DesignIcon from "../../assets/icons/design-icon.svg"
+import { SkillsData } from "../../data/config"
+import Banner from "../banner/banner"
+import Card from "../card"
 import { Section } from "../../common/styles/section"
 import styled from "styled-components"
 import { devices } from "../../theme/breakpoints"
@@ -19,14 +19,35 @@ const CardWrapper = styled.div`
   }
 `
 
-export const Services = () => {
-  const { section } = ServicesData
+export const Skills = () => {
+  const { section, ...skillsList } = SkillsData
+
+  const renderSkills = () => {
+    if (skillsList) {
+      let skillListValues = Object.values(skillsList)
+
+      return skillListValues.map(skill => {
+        return (
+          <Card
+            iconsrc={skill.icon}
+            headerTitle={skill.skillTitle.title}
+            headerText={skill.skillTitle.text}
+            descriptionTitle={skill.skillSubtitle.title}
+            descriptionText={skill.skillSubtitle.text}
+            toolsTitle={skill.skillTools.title}
+            toolsText={skill.skillTools.text}
+          />
+        )
+      })
+    }
+  }
+
   return (
     <>
       <Section id={section}>
         <Banner text={section} direction="up" />
         <CardWrapper>
-          <Card
+          {/* <Card
             iconsrc={DesignIcon}
             headerTitle="Design"
             headerText="I like to keep things clean & simple"
@@ -43,7 +64,8 @@ export const Services = () => {
             descriptionText="HTML5, CSS3, JS, React, React Native, C#, Java, SQL"
             toolsTitle="Dev tools"
             toolsText="Git, Github, VSCode, Vim, Terminal"
-          />
+          /> */}
+          {/* {renderSkills()} */}
         </CardWrapper>
       </Section>
     </>
