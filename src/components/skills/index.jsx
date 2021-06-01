@@ -1,6 +1,4 @@
 import React from "react"
-import ComputerIcon from "../../assets/icons/computer-icon.svg"
-import DesignIcon from "../../assets/icons/design-icon.svg"
 import { SkillsData } from "../../data/config"
 import Banner from "../banner/banner"
 import Card from "../card"
