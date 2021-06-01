@@ -3,7 +3,6 @@ import { Layout } from "../components/layout";
 import { graphql, Link } from "gatsby";
 import SEO from "../components/seo";
 import Button from "../common/button";
-import './projectTemplate.scss'
 import { GlobalStyle } from "../theme/globalStyles"
 import { Section } from "../common/styles/section"
 import styled from "styled-components"
