@@ -1,7 +1,57 @@
 import React, { useState } from "react"
 import { useForm } from "react-hook-form"
 import Button from "../../common/button"
-import style from "./index.module.scss"
+import styled from "styled-components"
+
+const FormStyled = styled.form`
+  display: flex;
+  max-width: 550px;
+  margin: 0 auto 3rem;
+  min-width: 200px;
+  flex-flow: column nowrap;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
+  padding: 1.75rem 2rem;
+`
+const Label = styled.label`
+  font-size: 1.231em;
+  display: block;
+  margin-bottom: 0.625rem;
+`
+const Input = styled.input`
+  all: unset;
+  font-size: 1.231em;
+  padding: 0.5rem;
+  border-radius: var(--border-radius);
+  box-sizing: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  width: 100%;
+`
+const TextArea = styled.textarea`
+  all: unset;
+  font-size: 1.231em;
+  box-sizing: border-box;
+  border-radius: var(--border-radius);
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  resize: none;
+  padding: 0.5rem;
+  width: 100%;
+  resize: none;
+`
+const InputWrapper = styled.div`
+  margin-bottom: 1.5em;
+`
+const ErrorMessage = styled.p`
+  font-variant: unset;
+  color: red;
+  margin: 0;
+`
+const FormStatusMessage = styled.p`
+  text-align: center;
+  color: ${props =>
+    props.success
+      ? props.theme.colors.ui.success
+      : props.theme.colors.ui.error};
+`
 
 export default function Form() {
   const [formStatus, setFormStatus] = useState("")
@@ -20,17 +70,14 @@ export default function Form() {
     //TODO: Reset form after successfull response.
   }
   return (
-    <form
-      className={style.form}
+    <FormStyled
       action={FORMSPREE_URL}
       method="POST"
       onSubmit={handleSubmit(onSubmit)}
     >
-      <div className={style.formDiv}>
-        <label className={style.label} htmlFor="name">
-          Name
-        </label>
-        <input
+      <InputWrapper>
+        <Label htmlFor="name">Name</Label>
+        <Input
           className="nameInput"
           type="text"
           name="name"
@@ -39,20 +86,17 @@ export default function Form() {
           ref={register({ required: true, minLength: 3 })}
         />
         {errors.name && errors.name.type === "required" && (
-          <p className={style.errorMessage}>This field is required !</p>
+          <ErrorMessage>This field is required !</ErrorMessage>
         )}
         {errors.name && errors.name.type === "minLength" && (
-          <p className={style.errorMessage}>
+          <ErrorMessage>
             This field requires 3+ characters of length !
-          </p>
+          </ErrorMessage>
         )}
-      </div>
-      <div className={style.formDiv}>
-        <label className={style.label} htmlFor="subject">
-          Subject
-        </label>
-        <input
-          className="subjectInput"
+      </InputWrapper>
+      <InputWrapper>
+        <Label htmlFor="subject">Subject</Label>
+        <Input
           type="text"
           name="subject"
           defaultValue=""
@@ -60,70 +104,57 @@ export default function Form() {
           ref={register({ required: true, minLength: 5 })}
         />
         {errors.subject && errors.subject.type === "required" && (
-          <p className={style.errorMessage}>↑ This field is required!</p>
+          <ErrorMessage>↑ This field is required!</ErrorMessage>
         )}
         {errors.subject && errors.subject.type === "minLength" && (
-          <p className={style.errorMessage}>
+          <ErrorMessage>
             ↑ This field requires 5+ characters of length.
-          </p>
+          </ErrorMessage>
         )}
-      </div>
-      <div className={style.formDiv}>
-        <label className={style.label} htmlFor="email">
-          Email (optional)
-        </label>
-        <input
+      </InputWrapper>
+      <InputWrapper>
+        <Label htmlFor="email">Email (optional)</Label>
+        <Input
           type="email"
-          className="emailInput"
           name="email"
           defaultValue=""
           placeholder="Type your email"
           ref={register}
         />
         {errors.email && errors.email.type === "email" && (
-          <p className={style.errorMessage}>
-            This field is form email format only!
-          </p>
+          <ErrorMessage>This field is form email format only!</ErrorMessage>
         )}
-      </div>
-      <div className={style.formDiv}>
-        <label className={style.label} htmlFor="message">
-          Message
-        </label>
-        <textarea
-          className={style.textAreaInput}
+      </InputWrapper>
+      <InputWrapper>
+        <Label htmlFor="message">Message</Label>
+        <TextArea
           name="message"
           id="message"
           cols="30"
           rows="10"
           ref={register({ required: true, minLength: 10 })}
           placeholder="Type your message"
-        ></textarea>
+        ></TextArea>
         {errors.message && errors.message.type === "required" && (
-          <p className={style.errorMessage}>↑ This field is required!</p>
+          <ErrorMessage>↑ This field is required!</ErrorMessage>
         )}
         {errors.message && errors.message.type === "minLength" && (
-          <p className={style.errorMessage}>
+          <ErrorMessage>
             ↑ This field requires 10+ characters of length
-          </p>
+          </ErrorMessage>
         )}
-      </div>
-      <Button
-        className={style.button}
-        isCentered="yes"
-        type="primary"
-        text="Submit"
-      />
+      </InputWrapper>
+      <Button isCentered="yes" type="primary" text="Submit" />
       {formStatus && (
-        <p className={`${style.formStatusMessage} ${style.success}`}>
+        <FormStatusMessage success>
           Your form was sent succesfully!
-        </p>
+        </FormStatusMessage>
       )}
       {formStatus === false ? (
-        <p className={`${style.formStatusMessage} ${style.error}`}>
+        <FormStatusMessage error>
           There was an error, reload & try again.
-        </p>
+        </FormStatusMessage>
       ) : null}
-    </form>
+    </FormStyled>
   )
 }

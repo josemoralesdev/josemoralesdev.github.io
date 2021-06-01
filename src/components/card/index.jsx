@@ -10,14 +10,14 @@ export default function Card({
   toolsTitle,
   toolsText,
 }) {
-  const toolsList = toolsText.split(",").map(tool => {
+  const toolsList = toolsText.map(tool => {
     return (
       <p className={style.text} key={tool}>
         {tool}
       </p>
     )
   })
-  const descriptionList = descriptionText.split(",").map(item => {
+  const descriptionList = descriptionText.map(item => {
     return (
       <p className={style.text} key={item}>
         {item}
