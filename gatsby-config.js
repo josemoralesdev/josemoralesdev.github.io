@@ -17,6 +17,17 @@ module.exports = {
         policy: [{ userAgent: "*", allow: "/" }],
       },
     },
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: [
+          "G-BPK0E5YY55",
+        ],
+        pluginConfig: {
+          head: true,
+        },
+      },
+    },
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
