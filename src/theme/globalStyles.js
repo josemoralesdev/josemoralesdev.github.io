@@ -1,4 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@200;300;400;700&display=swap");
+import { createGlobalStyle } from "styled-components";
+
+export const GlobalStyle = createGlobalStyle`
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap");
 :root {
   --black-500: #000;
   --black-400: #3f3f3f;
@@ -10,19 +13,21 @@
   --font-family: Roboto, sans-serif;
   --letter-spacing: 0.1em;
   --header-height: 75px;
+  --max-width: 1024px;
 }
 * {
   box-sizing: border-box;
 }
-html {
+html{
   scroll-behavior: smooth;
   scroll-padding-top: var(--header-height);
+}
   body {
     font-family: var(--font-family);
     margin: 0;
   }
   h1 {
-    font-size: 2.125em;
+    font-size: 2.250em;
     font-weight: 400;
     letter-spacing: var(--letter-spacing);
     text-align: center;
@@ -55,9 +60,6 @@ html {
     body {
       font-size: 15px;
     }
-    section {
-      padding: 95px 2rem;
-    }
   }
   @media only screen and (min-width: 1024px) {
     body {
@@ -69,5 +71,4 @@ html {
     body {
       font-size: 18px;
     }
-  }
-}
+`;

@@ -1,18 +1,21 @@
 import React from "react"
 import SEO from "../components/seo"
-import HomeSection from "../components/home-section"
-import About from "../components/about"
-import Services from "../components/services"
+import { Home } from "../components/home"
+import { About } from "../components/about"
+import { Skills } from "../components/skills"
 import { Portfolio } from "../components/portfolio"
 import { Contact } from "../components/contact"
 import { Layout } from '../components/layout'
+import { GlobalStyle } from "../theme/globalStyles"
+
 const IndexPage = () => (
   <>
     <SEO title="Home" />
     <Layout>
-      <HomeSection />
+      <GlobalStyle />
+      <Home />
       <About />
-      <Services />
+      <Skills />
       <Portfolio />
       <Contact />
     </Layout>

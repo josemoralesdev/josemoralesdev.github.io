@@ -10,6 +10,11 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: `gatsby-plugin-styled-components`,
+      options: {
+      },
+    },
+    {
       resolve: "gatsby-plugin-robots-txt",
       options: {
         host: "https://josemoralesdev.github.io/",
@@ -23,6 +28,7 @@ module.exports = {
         trackingIds: [
           "G-BPK0E5YY55",
         ],
+
         pluginConfig: {
           head: true,
         },
