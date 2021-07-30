@@ -54,20 +54,28 @@ const FormStatusMessage = styled.p`
 `
 
 export default function Form() {
-  const [formStatus, setFormStatus] = useState("")
+  const [formStatus, setFormStatus] = useState(null)
+  const [isLoading, setIsLoading] = useState(false)
   const { register, handleSubmit, errors } = useForm()
   const FORMSPREE_URL = process.env.GATSBY_FORMSPREE_URL
+
   const onSubmit = async data => {
+    setIsLoading(true)
     const requestOptions = {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
     }
-    const response = await fetch(FORMSPREE_URL, requestOptions)
-    const jsonData = await response.json()
-    jsonData.ok && setFormStatus(true)
-    !jsonData.ok && setFormStatus(false)
-    //TODO: Reset form after successfull response.
+    try {
+      const response = await fetch(FORMSPREE_URL, requestOptions)
+      const jsonData = await response.json()
+      if (jsonData.ok) {
+        setFormStatus(true)
+      }
+    } catch (error) {
+      setFormStatus(false)
+      setIsLoading(false)
+    }
   }
   return (
     <FormStyled
@@ -144,17 +152,22 @@ export default function Form() {
           </ErrorMessage>
         )}
       </InputWrapper>
-      <Button isCentered="yes" type="primary" text="Submit" />
+      <Button
+        isCentered="yes"
+        type="primary"
+        text="Submit"
+        isDisabled={isLoading}
+      />
       {formStatus && (
         <FormStatusMessage success>
           Your form was sent succesfully!
         </FormStatusMessage>
       )}
-      {formStatus === false ? (
+      {formStatus === false && (
         <FormStatusMessage error>
           There was an error, reload & try again.
         </FormStatusMessage>
-      ) : null}
+      )}
     </FormStyled>
   )
 }
