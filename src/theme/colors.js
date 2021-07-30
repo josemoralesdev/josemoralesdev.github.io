@@ -5,7 +5,7 @@ export const colors = {
     "black300": "#666666",
     "black200": "#898989",
     "black100": "#c4c4c4",
-    primary: "#666666",
+    primary: "#3f3f3f",
     secondary: "#3f3f3f",
     error: "#D0421B",
     success: "#138000",

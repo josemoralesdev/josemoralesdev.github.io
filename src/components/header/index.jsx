@@ -50,7 +50,7 @@ const LinkList = styled.ul`
       flex: 1 1 100%;
       list-style: none;
       font-size: 1em;
-      font-weight: 300;
+      font-weight: 400;
       font-variant: small-caps;
       text-transform: uppercase;
       transition: background 0.3s ease-in-out;
@@ -80,6 +80,7 @@ const LinkList = styled.ul`
     position: relative;
     top: unset;
       >li {
+        font-weight: 300;
         a {
           color: ${props => props.theme.colors.ui.black400};
           display: flex;
