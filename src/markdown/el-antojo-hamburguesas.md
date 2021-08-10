@@ -36,7 +36,7 @@ Inside the digital menu, clients can see, select dishes they like & later on, se
 
 This project was created with **React** & **Google Spreadsheets**.
 
-Demo: [El Antojo Hamburguesas](https://bit.ly/ElAntojoDemo)
+Demo: [El Antojo Hamburguesas](https://dev-el-antojo.netlify.app)
 
 *Source code not available.*
 
