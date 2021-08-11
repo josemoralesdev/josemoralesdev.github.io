@@ -36,7 +36,7 @@ const DateCreated = styled.small`
 export default function Template({ data }) {
   const { markdownRemark } = data;
   const { frontmatter, html } = markdownRemark;
-  const { author, date, title } = frontmatter;
+  const { date, title } = frontmatter;
 
   const formatDate = (date) => {
     const dateString = new Date(date);
