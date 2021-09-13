@@ -2,7 +2,7 @@
 path: "/projects/meals-to-go"
 author: "Jose E. Morales"
 date: "2021-05-05T00:00:00"
-title: "Project: MealsToGo"
+title: "MealsToGo"
 image: ../assets/images/projects/mealstogo/main-screen.png
 projectType: "Mobile"
 ---

@@ -3,9 +3,9 @@ require("dotenv").config({
 })
 module.exports = {
   siteMetadata: {
-    title: `Portfolio - Josemoralesdev`,
-    description: `Personal portfolio page`,
-    author: `@josemorales.dev`,
+    title: `José E. Morales | Sw. Engineer - React Developer`,
+    description: `Ever since I was a child, I've been passionate about problem solving and the tech world. Today I find myself developing creative solutions in the software industry. Currently working on Front End Development w/ React`,
+    author: `@josemoralesdev`,
     siteUrl: "https://josemoralesdev.github.io",
   },
   plugins: [
