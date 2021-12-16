@@ -1,6 +1,6 @@
 import React from "react"
 import * as styles from "./banner.module.scss"
-import Fade from "react-reveal"
+import Fade from "react-reveal/Fade"
 
 export default function Banner({ text, direction, position }) {
   const getDirection = direction === "up" ? styles.up : styles.down
