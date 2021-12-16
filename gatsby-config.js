@@ -4,6 +4,7 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: `José E. Morales | Sw. Engineer - React Developer`,
+
     description: `Ever since I was a child, I've been passionate about problem solving and the tech world. Today I find myself developing creative solutions in the software industry. Currently working on Front End Development w/ React`,
     author: `@josemoralesdev`,
     siteUrl: "https://josemoralesdev.github.io",
@@ -84,7 +85,7 @@ module.exports = {
         short_name: `portfolio`,
         start_url: `/index.js`,
         background_color: `#663399`,
-        theme_color: `#663399`,
+        theme_color: `#3f3f3f`,
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
