@@ -1,7 +1,7 @@
 import React from "react";
 import { Layout } from "../components/layout";
 import { graphql, Link } from "gatsby";
-import SEO from "../components/seo";
+import Seo from "../components/seo";
 import Button from "../common/button";
 import { GlobalStyle } from "../theme/globalStyles"
 import { Section } from "../common/styles/section"
@@ -49,7 +49,7 @@ export default function Template({ data }) {
     <>
       <GlobalStyle />
       <Layout>
-        <SEO title={title} />
+        <Seo title={title} />
         <Section>
           <Markdown>
             <div dangerouslySetInnerHTML={{ __html: html }} />

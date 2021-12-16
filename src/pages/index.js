@@ -1,5 +1,5 @@
 import React from "react"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import { Home } from "../components/home"
 import { About } from "../components/about"
 import { Skills } from "../components/skills"
@@ -10,7 +10,7 @@ import { GlobalStyle } from "../theme/globalStyles"
 
 const IndexPage = () => (
   <>
-    <SEO title="Home" />
+    <Seo title="Home" />
     <Layout>
       <GlobalStyle />
       <Home />
