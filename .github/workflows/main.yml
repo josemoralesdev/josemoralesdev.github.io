@@ -15,12 +15,12 @@ jobs:
       - name: Install and Build 🔧
         run: |
           npm install
-          npm run-script build
+          npm run build
         env:
           GATSBY_FORMSPREE_URL: ${{ secrets.GATSBY_FORMSPREE_URL }}
 
       - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@3.6.2
+        uses: JamesIves/github-pages-deploy-action@4.1.7
         with:
           GITHUB_TOKEN: ${{ secrets.GATSBY_ACCESS_TOKEN }}
           BRANCH: master
