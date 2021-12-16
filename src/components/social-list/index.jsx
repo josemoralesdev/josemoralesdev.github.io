@@ -1,7 +1,7 @@
 import React from "react"
 import { Fade } from "react-reveal"
 import { HomeData } from "../../data/config"
-import styles from "./index.module.scss"
+import * as styles from "./index.module.scss"
 
 export default function SocialList() {
   const { socialLinks } = HomeData

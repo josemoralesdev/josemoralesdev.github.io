@@ -1,5 +1,5 @@
 import React from "react"
-import style from "./index.module.scss"
+import * as style from "./index.module.scss"
 
 export default function Card({
   iconsrc,

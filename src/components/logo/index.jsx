@@ -1,5 +1,5 @@
 import React from "react"
-import styles from "./index.module.scss"
+import * as styles from "./index.module.scss"
 import logo from "../../assets/Logo.svg"
 import logoWhite from "../../assets/logo/Logo-white.svg"
 import { Link } from "gatsby"

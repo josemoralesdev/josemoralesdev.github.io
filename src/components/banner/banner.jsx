@@ -1,5 +1,5 @@
 import React from "react"
-import styles from "./banner.module.scss"
+import * as styles from "./banner.module.scss"
 import Fade from "react-reveal"
 
 export default function Banner({ text, direction, position }) {

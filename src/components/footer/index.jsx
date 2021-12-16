@@ -1,6 +1,6 @@
 import React from "react"
 import { FooterData } from "../../data/config"
-import styles from "./index.module.scss"
+import * as styles from "./index.module.scss"
 //import NavLinks from "../nav-links"
 //import Logo from "../logo"
 
