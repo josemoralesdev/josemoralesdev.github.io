@@ -81,9 +81,9 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `portfolio`,
-        start_url: `/index.js`,
+        name: `Jose E. Morales Portfolio Website`,
+        short_name: `Jose's Portfolio`,
+        start_url: `/`,
         background_color: `#663399`,
         theme_color: `#3f3f3f`,
         display: `minimal-ui`,
