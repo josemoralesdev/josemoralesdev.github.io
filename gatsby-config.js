@@ -84,10 +84,11 @@ module.exports = {
         name: `Jose E. Morales Portfolio Website`,
         short_name: `Jose's Portfolio`,
         start_url: `/`,
-        background_color: `#663399`,
+        background_color: `#ffffff`,
         theme_color: `#3f3f3f`,
-        display: `minimal-ui`,
-        icon: `src/images/JEM_logo_maskable.png`, // This path is relative to the root of the site.
+        display: `standalone`,
+        icon: `src/images/favicon.png`, // This path is relative to the root of the site.
+        legacy: true,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
