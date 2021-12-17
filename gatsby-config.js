@@ -7,6 +7,7 @@ module.exports = {
 
     description: `Sw. Engr. Passionate about problem solving & the tech world. I design & develop creative solutions in the software industry. Working on front end w/ React.js.`,
     author: `@josemoralesdev`,
+    siteUrl: "https://josemoralesdev.github.io",
     url: "https://josemoralesdev.github.io",
     image: `src/images/social-image.png`,
     keywords: `software engineer, software developer, developer, software, react, reactjs, react developer, front end developer, frontend developer, front end engineer, freelance developer, freelance software engineer, javascript developer`
