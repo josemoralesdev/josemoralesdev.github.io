@@ -31,8 +31,8 @@ function Seo({ description, lang, meta, title }) {
   const metaDescription = description || site.siteMetadata.description
   const defaultTitle = site.siteMetadata?.title
   const keywords = site.siteMetadata.keywords
-  const image = site.siteMetadata.image
   const url = site.siteMetadata.url
+  const image = `${url}${site.siteMetadata.image}`
 
   return (
     <Helmet
@@ -72,7 +72,7 @@ function Seo({ description, lang, meta, title }) {
         },
         {
           name: `twitter:card`,
-          content: `summary`,
+          content: `summary_large_image`,
         },
         {
           property: `twitter:domain`,

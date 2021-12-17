@@ -9,7 +9,7 @@ module.exports = {
     author: `@josemoralesdev`,
     siteUrl: "https://josemoralesdev.github.io",
     url: "https://josemoralesdev.github.io",
-    image: `src/images/social-image.png`,
+    image: `/social-image.png`,
     keywords: `software engineer, software developer, developer, software, react, reactjs, react developer, front end developer, frontend developer, front end engineer, freelance developer, freelance software engineer, javascript developer`
   },
   plugins: [
