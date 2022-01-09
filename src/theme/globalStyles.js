@@ -29,6 +29,9 @@ export const GlobalStyle = createGlobalStyle`
   --text-accent: ${({ theme }) => theme.colors.text.accent || "#fff"};
   --anchor-color: ${lighten(.3, `#0000EE`)};
   --anchor-visited: ${lighten(.3, '#551A8B')};
+  #email-icon, #instagram-icon, #github-icon, #linkedin-icon {
+    filter: invert(1);
+  }
 }
 html{
   scroll-behavior: smooth;

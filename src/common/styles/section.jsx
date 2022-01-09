@@ -6,7 +6,7 @@ export const Section = styled.section`
   font-variant: all-small-caps;
   margin: 0 auto 5.769em;
   max-width: ${props => props.theme.globals.maxWidth};
-  padding: 5.769em 16px;
+  padding: 5.769em 1.38em;
   @media ${devices.tablet} {
     padding: 95px 2rem;
   }

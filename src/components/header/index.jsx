@@ -24,7 +24,7 @@ const StyledHeader = styled.header`
   background-color: ${({ theme }) => theme.colors.bg.primary};
   border-bottom: 1px solid ${({ theme }) => theme.colors.ui.decoration};
   height: ${({ theme }) => theme.globals.headerHeight};
-  padding: 0 16px;
+  padding: 0 1.38em;
   transition: background-color ${({ theme }) => theme.globals.themeTransitionDuration},  border-bottom ${({ theme }) => theme.globals.themeTransitionDuration};
   z-index: 1;
 `
