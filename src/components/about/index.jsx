@@ -37,7 +37,7 @@ const Image = styled(Img)`
 const AboutText = styled.p`
   display: flex;
   font-variant: small-caps;
-  color: var(--black-300);
+  color: ${props => props.theme.colors.text.body};
   font-size: 1.3846em;
   line-height: 28px;
   margin: 1.92em auto;
@@ -45,6 +45,7 @@ const AboutText = styled.p`
   letter-spacing: 0.1em;
   font-weight: 400;
   text-align: justify;
+  transition: color ${({ theme }) => theme.globals.themeTransitionDuration};
   @media ${devices.mobileM} {
     width: 100%;
   }

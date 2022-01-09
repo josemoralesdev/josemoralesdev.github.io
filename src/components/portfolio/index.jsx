@@ -7,7 +7,10 @@ import { Section } from "../../common/styles/section"
 import styled from "styled-components"
 
 const PortfolioTitle = styled.h2`
+  color: ${props => props.theme.colors.text.accent};
+  transition: ${({ theme }) => theme.globals.themeTransitionDuration};
   max-width: 80vw;
+
 `
 const Grid = styled.div`
   margin-top: 5em;

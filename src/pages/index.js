@@ -5,21 +5,18 @@ import { About } from "../components/about"
 import { Skills } from "../components/skills"
 import { Portfolio } from "../components/portfolio"
 import { Contact } from "../components/contact"
-import { Layout } from '../components/layout'
-import { GlobalStyle } from "../theme/globalStyles"
 
-const IndexPage = () => (
-  <>
-    <Seo title="Home" />
-    <Layout>
-      <GlobalStyle />
+const IndexPage = () => {
+  return (
+    <>
+      <Seo title="Home" />
       <Home />
       <About />
       <Skills />
       <Portfolio />
       <Contact />
-    </Layout>
-  </>
-)
+    </>
+  )
+}
 
 export default IndexPage

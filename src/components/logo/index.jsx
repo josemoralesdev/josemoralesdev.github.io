@@ -4,9 +4,9 @@ import logo from "../../assets/Logo.svg"
 import logoWhite from "../../assets/logo/Logo-white.svg"
 import { Link } from "gatsby"
 
-export default function Logo({ className, inverted = "false" }) {
+export default function Logo({ className, inverted = false }) {
   const returnLogo =
-    inverted === "true" ? (
+    inverted ? (
       <>
         <div className={styles.logoWrapper}>
           <Link to="/" aria-label="Click to navigate to home">

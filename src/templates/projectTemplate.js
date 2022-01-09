@@ -1,36 +1,55 @@
 import React from "react";
-import { Layout } from "../components/layout";
 import { graphql, Link } from "gatsby";
 import Seo from "../components/seo";
 import Button from "../common/button";
-import { GlobalStyle } from "../theme/globalStyles"
 import { Section } from "../common/styles/section"
 import styled from "styled-components"
 
 const Markdown = styled.div`
   h1{
     margin: revert;
+    color: ${({ theme }) => theme.colors.text.accent};
+    transition: color ${({ theme }) => theme.globals.themeTransitionDuration};
   }
   h2{
     margin: revert;
     margin-top: 1.5em;
+    color: ${({ theme }) => theme.colors.text.accent};
+    transition: color ${({ theme }) => theme.globals.themeTransitionDuration};
+  }
+  h3{
+    margin: revert;
+    margin-top: 1.5em;
+    color: ${({ theme }) => theme.colors.text.accent};
+    transition: color ${({ theme }) => theme.globals.themeTransitionDuration};
   }
   img{
   }
   p{
     font-size: 1.35em;
     line-height: 1.75;
-    color: ${props => props.theme.colors.text.secondary}
+    color: ${({ theme }) => theme.colors.text.body};
+    transition: color ${({ theme }) => theme.globals.themeTransitionDuration};
   }
   li{
     font-size: 1.2em;
     line-height: 1.5;
-    color: ${props => props.theme.colors.text.secondary}
+    color: ${({ theme }) => theme.colors.text.body};
+    transition: color ${({ theme }) => theme.globals.themeTransitionDuration};
+  }
+  a{
+    color: var(--anchor-color);
+  }
+  a:visited{
+    color: var(--anchor-visited);
   }
 `;
+
 const DateCreated = styled.small`
   font-style: italic;
   font-size: 1.2em;
+  color: ${({ theme }) => theme.colors.text.accent};
+  transition: color ${({ theme }) => theme.globals.themeTransitionDuration};
 `;
 
 export default function Template({ data }) {
@@ -45,21 +64,19 @@ export default function Template({ data }) {
 
     return `${month}/${year}`
   }
+
   return (
     <>
-      <GlobalStyle />
-      <Layout>
-        <Seo title={title} />
-        <Section>
-          <Markdown>
-            <div dangerouslySetInnerHTML={{ __html: html }} />
-          </Markdown>
-          <DateCreated>{formatDate(date)}</DateCreated>
-          <Link to="/#projects">
-            <Button text="Go back" type="primary" isCentered="yes" />
-          </Link>
-        </Section>
-      </Layout>
+      <Seo title={title} />
+      <Section>
+        <Markdown>
+          <div dangerouslySetInnerHTML={{ __html: html }} />
+        </Markdown>
+        <DateCreated>{formatDate(date)}</DateCreated>
+        <Link to="/#projects">
+          <Button text="Go back" type="primary" isCentered="yes" />
+        </Link>
+      </Section>
     </>
   )
 

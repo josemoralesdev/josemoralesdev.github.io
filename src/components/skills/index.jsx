@@ -11,7 +11,7 @@ const CardWrapper = styled.div`
   display: flex;
   flex-flow: row wrap;
   margin: 0 auto;
-  justify-content: space-evenly;
+  justify-content: space-between;
   @media ${devices.desktop} {
     gap: 1.5em;
   }

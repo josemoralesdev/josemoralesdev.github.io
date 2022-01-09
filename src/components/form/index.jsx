@@ -9,13 +9,16 @@ const FormStyled = styled.form`
   margin: 0 auto 3rem;
   min-width: 200px;
   flex-flow: column nowrap;
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 2px var(--ui-decoration);
   padding: 1.75rem 2rem;
+  transition: box-shadow ${({ theme }) => theme.globals.themeTransitionDuration};
 `
 const Label = styled.label`
   font-size: 1.231em;
   display: block;
   margin-bottom: 0.625rem;
+  color: ${({ theme }) => theme.colors.text.body};
+  transition: color ${({ theme }) => theme.globals.themeTransitionDuration};
 `
 const Input = styled.input`
   all: unset;
@@ -23,7 +26,8 @@ const Input = styled.input`
   padding: 0.5rem;
   border-radius: var(--border-radius);
   box-sizing: border-box;
-  border: 1px solid rgba(0, 0, 0, 0.25);
+  border: 1px solid var(--ui-decoration);
+  transition: border ${({ theme }) => theme.globals.themeTransitionDuration};
   width: 100%;
 `
 const TextArea = styled.textarea`
@@ -31,9 +35,10 @@ const TextArea = styled.textarea`
   font-size: 1.231em;
   box-sizing: border-box;
   border-radius: var(--border-radius);
-  border: 1px solid rgba(0, 0, 0, 0.25);
+  border: 1px solid var(--ui-decoration);
   resize: none;
   padding: 0.5rem;
+  transition: border ${({ theme }) => theme.globals.themeTransitionDuration};
   width: 100%;
   resize: none;
 `
@@ -42,7 +47,7 @@ const InputWrapper = styled.div`
 `
 const ErrorMessage = styled.p`
   font-variant: unset;
-  color: red;
+  color: ${({ theme }) => theme.colors.ui.error};
   margin: 0;
 `
 const FormStatusMessage = styled.p`

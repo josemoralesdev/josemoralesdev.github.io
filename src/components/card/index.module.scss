@@ -1,16 +1,19 @@
 .title {
+  color: var(--text-accent);
   font-size: 1.71em;
   font-weight: 700;
   margin: 0.625em auto;
   letter-spacing: var(--letter-spacing);
+  transition: color var(--themeTransitionDuration);
 }
 .text {
-  color: var(--black-300);
+  color: var(--text-body);
   letter-spacing: var(--letter-spacing);
   line-height: 1.57em;
   font-size: 1.2857em;
   font-weight: 400;
   margin: 0.8333em auto;
+  transition: color var(--themeTransitionDuration);
 }
 .card {
   text-align: center;
@@ -18,7 +21,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: (0px 2px 5px rgba(0, 0, 0, 0.1));
+  box-shadow: (0px 2px 5px var(--ui-decoration));
+  transition: box-shadow var(--themeTransitionDuration);
   min-width: 280px;
   width: 100%;
   max-width: 350px;

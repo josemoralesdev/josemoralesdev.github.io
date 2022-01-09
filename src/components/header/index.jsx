@@ -1,8 +1,11 @@
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect, useContext } from "react"
 import NavLinks from "../nav-links"
 import Logo from "../logo"
 import styled from "styled-components"
 import { devices } from "../../theme/breakpoints"
+import { ThemeContext } from "../../context/ThemeContext"
+import sunIcon from "../../assets/icons/sun.svg";
+import moonIcon from "../../assets/icons/moon.svg";
 
 const Wrapper = styled.div`
   max-width: 1024px;
@@ -18,10 +21,11 @@ const StyledHeader = styled.header`
   top: 0;
   left: 0;
   width: 100%;
-  background-color: white;
-  border-bottom: 1px solid hsl(0, 0%, 90%);
-  height: ${props => props.theme.globals.headerHeight};
+  background-color: ${({ theme }) => theme.colors.bg.primary};
+  border-bottom: 1px solid ${({ theme }) => theme.colors.ui.decoration};
+  height: ${({ theme }) => theme.globals.headerHeight};
   padding: 0 16px;
+  transition: background-color ${({ theme }) => theme.globals.themeTransitionDuration},  border-bottom ${({ theme }) => theme.globals.themeTransitionDuration};
   z-index: 1;
 `
 const Nav = styled.nav`
@@ -31,14 +35,14 @@ const Nav = styled.nav`
   }
 `
 const LinkList = styled.ul`
-  background-color: ${({ theme }) => theme.colors.ui.black400};
+  background-color: ${({ theme }) => theme.colors.ui.primary};
   flex-direction: column;
-  height: calc(100% - ${props => props.theme.globals.headerHeight});
+  height: calc(100% - ${({ theme }) => theme.globals.headerHeight});
   left: 0;
   margin: 0 auto;
   padding: 0;
   position: fixed;
-  top: ${props => props.theme.globals.headerHeight};
+  top: ${({ theme }) => theme.globals.headerHeight};
   transition: all 0.3s ease-in-out;
   width: 100%;
   z-index: 1;
@@ -54,11 +58,15 @@ const LinkList = styled.ul`
       font-variant: small-caps;
       text-transform: uppercase;
       transition: background 0.3s ease-in-out;
-      &:hover {
-        background-color: ${({ theme }) => theme.colors.ui.black400};
+      &:last-child{
+        flex: 1 1 100%;
+      }
+      &:hover:not(:last-child){
+        background-color: ${({ theme }) => theme.colors.ui.primary};
+      }
       }
       a {
-        transition: color 0.3s ease-in-out;
+        transition: color 0.3s ease-in-out, color ${({ theme }) => theme.globals.themeTransitionDuration};
         display: flex;
         justify-content: center;
         align-items: center;
@@ -81,8 +89,11 @@ const LinkList = styled.ul`
     top: unset;
       >li {
         font-weight: 300;
+        &:last-child{
+          flex: 1 1 35%;
+        }
         a {
-          color: ${props => props.theme.colors.ui.black400};
+          color: ${({ theme }) => theme.colors.text.accent};
           display: flex;
           padding: 1rem;
           align-self: center;
@@ -107,7 +118,7 @@ const HamMenu = styled.div`
   &:after,
   &:before,
   div {
-    background-color: ${({ theme }) => theme.colors.ui.primary};
+    background-color: ${({ theme }) => theme.colors.ui.accent};
     content: "";
     display: block;
     height: 4px;
@@ -117,11 +128,11 @@ const HamMenu = styled.div`
   }
   &:before {
     transform: ${({ isOpen }) =>
-      isOpen ? ["translateY(10px)", "rotate(135deg)"] : null};
+    isOpen ? ["translateY(10px)", "rotate(135deg)"] : null};
   }
   &::after {
     transform: ${({ isOpen }) =>
-      isOpen ? ["translateY(-10px)", "rotate(-135deg)"] : null};
+    isOpen ? ["translateY(-10px)", "rotate(-135deg)"] : null};
   }
   div {
     transform: ${({ isOpen }) => (isOpen ? "scale(0)" : null)};
@@ -130,13 +141,32 @@ const HamMenu = styled.div`
     display: none;
   }
 `
+const ThemeCheckbox = styled.input.attrs({ type: 'checkbox' })`
+  display: none;
+  & + label {
+    margin: 0 auto;
+    cursor: pointer;
+  }
+  & + label:before{
+  }
+  &:checked + label:before{
+  }
+  @media ${devices.tablet}{
+    & + label{
+      margin: 0 0 0 auto;
+    }
+  }
+`;
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
+  const { darkMode, toggleTheme } = useContext(ThemeContext);
+  const ICON_SIZE = "24px";
 
   const toggleClicked = () => {
     setIsOpen(!isOpen)
   }
+
   useEffect(() => {
     if (window.innerWidth < 768) {
       isOpen && (document.body.style.overflow = "hidden")
@@ -152,10 +182,29 @@ export default function Header() {
     <>
       <StyledHeader>
         <Wrapper>
-          <Logo />
+          <Logo inverted={darkMode} />
           <Nav>
-            <LinkList isOpen={isOpen} onClick={toggleClicked}>
-              <NavLinks />
+            <LinkList isOpen={isOpen} >
+              <NavLinks toggleClicked={toggleClicked} />
+              <li style={{ display: 'flex', alignItems: 'center', justifyItems: 'center' }}>
+                <ThemeCheckbox id="toggleThemeCheckBox" checked={darkMode} readOnly onClick={() => {
+                  toggleTheme();
+                  toggleClicked();
+                }} />
+                <label htmlFor="toggleThemeCheckBox">
+                  {darkMode
+                    ? <img
+                      src={sunIcon}
+                      height={ICON_SIZE}
+                      width={ICON_SIZE}
+                    />
+                    : <img
+                      src={moonIcon}
+                      style={{ transform: 'rotate(220deg)' }}
+                      height={ICON_SIZE} width={ICON_SIZE}
+                    />}
+                </label>
+              </li>
             </LinkList>
           </Nav>
           <MenuButton onClick={toggleClicked} aria-label="Navigtion Button">

@@ -1,5 +1,5 @@
 .background {
-  background-color: var(--black-400);
+  background-color: var(--primary-color);
   position: absolute;
   z-index: 0;
   margin-top: -25px;
@@ -8,7 +8,7 @@
     font-family: var(--font-family);
     font-size: 2.28em;
     line-height: 37px;
-    -webkit-text-stroke: 1px var(--black-400);
+    -webkit-text-stroke: 1px var(--primary-color);
     font-variant: small-caps;
     color: #ffffff;
     position: relative;

@@ -9,23 +9,27 @@ import { Section } from "../../common/styles/section"
 import { devices } from "../../theme/breakpoints"
 
 const Role = styled.p`
+  color: ${props => props.theme.colors.text.accent};
   margin-top: 0;
   font-size: 2.57em;
   line-height: 42px;
   font-style: normal;
   font-weight: 300;
   letter-spacing: 0.2em;
+  transition: color ${({theme}) => theme.globals.themeTransitionDuration};
   @media ${devices.desktop} {
     margin: 0;
   }
 `
 const Greeting = styled.p`
+  color: ${props => props.theme.colors.text.accent};
   margin: 40px 0;
   font-size: 2em;
   font-weight: 300;
   line-height: 34px;
   letter-spacing: 0.2em;
   text-align: left;
+  transition: color ${({theme}) => theme.globals.themeTransitionDuration};
   @media ${devices.tablet} {
     margin-top: 0;
   }

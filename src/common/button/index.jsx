@@ -4,9 +4,9 @@ import { darken, lighten } from "polished"
 
 const ButtonStyled = styled.button`
   box-sizing: border-box;
-  border: 1px solid var(--black-400);
+  border: 1px solid ${props => props.theme.colors.ui.primary};
   background-color: ${props =>
-    props.primary ? props.theme.colors.ui.primary : "white"};
+    props.primary ? props.theme.colors.ui.primary : props.theme.colors.bg.primary};
   border-radius: 4px;
   font-family: var(--font-family);
   font-size: 1em;
@@ -17,18 +17,19 @@ const ButtonStyled = styled.button`
   cursor: pointer;
   text-align: center;
   text-transform: uppercase;
-  transition: background-color 0.3s ease;
+  transition: background-color ${props => props.theme.globals.themeTransitionDuration}, color ${props => props.theme.globals.themeTransitionDuration};
   &:disabled {
     background-color: ${props =>
-      props.primary && lighten(0.15, `${props.theme.colors.ui.primary}`)};
+    props.primary && lighten(0.15, `${props.theme.colors.ui.primary}`)};
   }
   &:hover {
     background-color: ${props =>
-      props.primary && darken(0.15, `${props.theme.colors.ui.primary}`)};
+    props.primary && darken(0.15, `${props.theme.colors.ui.primary}`)};
   }
   span {
     color: ${props =>
-      props.primary ? "white" : props.theme.colors.ui.primary};
+    props.primary ? "white" : props.theme.colors.text.accent};
+    transition: color ${({ theme }) => theme.globals.themeTransitionDuration};
   }
   margin: ${props => props.center && "auto"};
   display: ${props => props.center && "block"};
