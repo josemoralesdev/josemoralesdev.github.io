@@ -8,34 +8,34 @@ import styled from "styled-components"
 const Markdown = styled.div`
   h1{
     margin: revert;
-    color: ${({ theme }) => theme.colors.text.accent};
-    transition: color ${({ theme }) => theme.globals.themeTransitionDuration};
+    color: var(--text-accent);
+    transition: color var(--themeTransitionDuration);
   }
   h2{
     margin: revert;
     margin-top: 1.5em;
-    color: ${({ theme }) => theme.colors.text.accent};
-    transition: color ${({ theme }) => theme.globals.themeTransitionDuration};
+    color: var(--text-accent);
+    transition: color var(--themeTransitionDuration);
   }
   h3{
     margin: revert;
     margin-top: 1.5em;
-    color: ${({ theme }) => theme.colors.text.accent};
-    transition: color ${({ theme }) => theme.globals.themeTransitionDuration};
+    color: var(--text-accent);
+    transition: color var(--themeTransitionDuration);
   }
   img{
   }
   p{
     font-size: 1.35em;
     line-height: 1.75;
-    color: ${({ theme }) => theme.colors.text.body};
-    transition: color ${({ theme }) => theme.globals.themeTransitionDuration};
+    color: var(--text-body);
+    transition: color var(--themeTransitionDuration);
   }
   li{
     font-size: 1.2em;
     line-height: 1.5;
-    color: ${({ theme }) => theme.colors.text.body};
-    transition: color ${({ theme }) => theme.globals.themeTransitionDuration};
+    color: var(--text-body);
+    transition: color var(--themeTransitionDuration);
   }
   a{
     color: var(--anchor-color);
@@ -48,8 +48,8 @@ const Markdown = styled.div`
 const DateCreated = styled.small`
   font-style: italic;
   font-size: 1.2em;
-  color: ${({ theme }) => theme.colors.text.accent};
-  transition: color ${({ theme }) => theme.globals.themeTransitionDuration};
+  color: var(--text-accent);
+  transition: color var(--themeTransitionDuration);
 `;
 
 export default function Template({ data }) {

@@ -4,8 +4,7 @@ import Logo from "../logo"
 import styled from "styled-components"
 import { devices } from "../../theme/breakpoints"
 import { ThemeContext } from "../../context/ThemeContext"
-import sunIcon from "../../assets/icons/sun.svg";
-import moonIcon from "../../assets/icons/moon.svg";
+import { DarkToggle } from "../../components/darkToggle"
 
 const Wrapper = styled.div`
   max-width: 1024px;
@@ -21,11 +20,11 @@ const StyledHeader = styled.header`
   top: 0;
   left: 0;
   width: 100%;
-  background-color: ${({ theme }) => theme.colors.bg.primary};
-  border-bottom: 1px solid ${({ theme }) => theme.colors.ui.decoration};
-  height: ${({ theme }) => theme.globals.headerHeight};
+  background-color: var(--background-color);
+  border-bottom: 1px solid var(--ui-decoration);
+  height: var(--header-height);
   padding: 0 1.38em;
-  transition: background-color ${({ theme }) => theme.globals.themeTransitionDuration},  border-bottom ${({ theme }) => theme.globals.themeTransitionDuration};
+  transition: background-color var(--themeTransitionDuration),  border-bottom var(--themeTransitionDuration);
   z-index: 1;
 `
 const Nav = styled.nav`
@@ -35,7 +34,7 @@ const Nav = styled.nav`
   }
 `
 const LinkList = styled.ul`
-  background-color: ${({ theme }) => theme.colors.ui.primary};
+  background-color: var(--primary-color);
   flex-direction: column;
   height: calc(100% - ${({ theme }) => theme.globals.headerHeight});
   left: 0;
@@ -62,7 +61,7 @@ const LinkList = styled.ul`
         flex: 1 1 100%;
       }
       &:hover:not(:last-child){
-        background-color: ${({ theme }) => theme.colors.ui.primary};
+        background-color: var(--primary-color);
       }
       }
       a {
@@ -93,7 +92,7 @@ const LinkList = styled.ul`
           flex: 1 1 35%;
         }
         a {
-          color: ${({ theme }) => theme.colors.text.accent};
+          color: var(--text-accent);
           display: flex;
           padding: 1rem;
           align-self: center;
@@ -118,7 +117,7 @@ const HamMenu = styled.div`
   &:after,
   &:before,
   div {
-    background-color: ${({ theme }) => theme.colors.ui.accent};
+    background-color: var(--text-accent);
     content: "";
     display: block;
     height: 4px;
@@ -141,27 +140,10 @@ const HamMenu = styled.div`
     display: none;
   }
 `
-const ThemeCheckbox = styled.input.attrs({ type: 'checkbox' })`
-  display: none;
-  & + label {
-    margin: 0 auto;
-    cursor: pointer;
-  }
-  & + label:before{
-  }
-  &:checked + label:before{
-  }
-  @media ${devices.tablet}{
-    & + label{
-      margin: 0 0 0 auto;
-    }
-  }
-`;
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
-  const { darkMode, toggleTheme } = useContext(ThemeContext);
-  const ICON_SIZE = "24px";
+  const { colorMode } = useContext(ThemeContext);
 
   const toggleClicked = () => {
     setIsOpen(!isOpen)
@@ -182,29 +164,11 @@ export default function Header() {
     <>
       <StyledHeader>
         <Wrapper>
-          <Logo inverted={darkMode} />
+          <Logo theme={colorMode} />
           <Nav>
             <LinkList isOpen={isOpen} >
               <NavLinks toggleClicked={toggleClicked} />
-              <li style={{ display: 'flex', alignItems: 'center', justifyItems: 'center' }}>
-                <ThemeCheckbox id="toggleThemeCheckBox" checked={darkMode} readOnly onClick={() => {
-                  toggleTheme();
-                  toggleClicked();
-                }} />
-                <label htmlFor="toggleThemeCheckBox">
-                  {darkMode
-                    ? <img
-                      src={sunIcon}
-                      height={ICON_SIZE}
-                      width={ICON_SIZE}
-                    />
-                    : <img
-                      src={moonIcon}
-                      style={{ transform: 'rotate(220deg)' }}
-                      height={ICON_SIZE} width={ICON_SIZE}
-                    />}
-                </label>
-              </li>
+              <DarkToggle toggleClicked={toggleClicked} />
             </LinkList>
           </Nav>
           <MenuButton onClick={toggleClicked} aria-label="Navigtion Button">

@@ -7,8 +7,8 @@ import { Section } from "../../common/styles/section"
 import styled from "styled-components"
 
 const PortfolioTitle = styled.h2`
-  color: ${props => props.theme.colors.text.accent};
-  transition: ${({ theme }) => theme.globals.themeTransitionDuration};
+  color: var(--text-accent);
+  transition: var(--themeTransitionDuration);
   max-width: 80vw;
 
 `

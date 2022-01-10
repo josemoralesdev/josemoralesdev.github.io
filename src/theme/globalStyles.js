@@ -1,5 +1,4 @@
 import { createGlobalStyle } from "styled-components";
-import { lighten } from "polished";
 
 export const GlobalStyle = createGlobalStyle`
 :root {
@@ -7,36 +6,26 @@ export const GlobalStyle = createGlobalStyle`
   --letter-spacing: 0.1em;
   --header-height: 75px;
   --max-width: 1024px;
-  --themeTransitionDuration: ${({ theme }) => theme.globals.themeTransitionDuration || '1s'};
-  --ui-decoration: ${({ theme }) => theme.colors.ui.decoration || "#fff"};
-}
+  --themeTransitionDuration: ${({ theme }) => theme.globals.themeTransitionDuration};
 }
 * {
   box-sizing: border-box;
 }
 .light{
-  --background-color: ${({ theme }) => theme.colors.bg.primary || "#fff"};
-  --primary-color: ${({ theme }) => theme.colors.ui.primary || "#fff"};
-  --text-body: ${({ theme }) => theme.colors.text.body || "#fff"};
-  --text-accent: ${({ theme }) => theme.colors.text.accent || "#fff"};
   --anchor-color: #0000EE;
   --anchor-visited: #551A8B;
  }
-.dark{
-  --background-color: ${({ theme }) => theme.colors.bg.primary || "#fff"};
-  --primary-color: ${({ theme }) => theme.colors.ui.primary || "#fff"};
-  --text-body: ${({ theme }) => theme.colors.text.body || "#fff"};
-  --text-accent: ${({ theme }) => theme.colors.text.accent || "#fff"};
-  --anchor-color: ${lighten(.3, `#0000EE`)};
-  --anchor-visited: ${lighten(.3, '#551A8B')};
   #email-icon, #instagram-icon, #github-icon, #linkedin-icon {
-    filter: invert(1);
-  }
+    g{
+      path{
+        fill: var(--text-accent);
+      }
+    }
 }
 html{
   scroll-behavior: smooth;
   scroll-padding-top: var(--header-height);
-}
+  }
   body {
     background-color: var(--background-color);
     font-family: var(--font-family);

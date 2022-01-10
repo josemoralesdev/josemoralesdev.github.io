@@ -37,7 +37,7 @@ const Image = styled(Img)`
 const AboutText = styled.p`
   display: flex;
   font-variant: small-caps;
-  color: ${props => props.theme.colors.text.body};
+  color: var(--text-body);
   font-size: 1.3846em;
   line-height: 28px;
   margin: 1.92em auto;

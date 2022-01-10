@@ -4,9 +4,9 @@ import { darken, lighten } from "polished"
 
 const ButtonStyled = styled.button`
   box-sizing: border-box;
-  border: 1px solid ${props => props.theme.colors.ui.primary};
+  border: 1px solid var(--primary-color);
   background-color: ${props =>
-    props.primary ? props.theme.colors.ui.primary : props.theme.colors.bg.primary};
+    props.primary ? 'var(--primary-color)' : 'var(--background-color)'};
   border-radius: 4px;
   font-family: var(--font-family);
   font-size: 1em;
@@ -28,7 +28,7 @@ const ButtonStyled = styled.button`
   }
   span {
     color: ${props =>
-    props.primary ? "white" : props.theme.colors.text.accent};
+    props.primary ? "white" : 'var(--text-accent)'};
     transition: color ${({ theme }) => theme.globals.themeTransitionDuration};
   }
   margin: ${props => props.center && "auto"};

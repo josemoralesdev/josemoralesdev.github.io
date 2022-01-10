@@ -17,7 +17,7 @@ const Label = styled.label`
   font-size: 1.231em;
   display: block;
   margin-bottom: 0.625rem;
-  color: ${({ theme }) => theme.colors.text.body};
+  color: var(--text-body);
   transition: color ${({ theme }) => theme.globals.themeTransitionDuration};
 `
 const Input = styled.input`

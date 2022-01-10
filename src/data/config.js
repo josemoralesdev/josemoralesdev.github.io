@@ -1,15 +1,10 @@
 import React from 'react'
-// Icons
 import ComputerIcon from "../assets/icons/computer-icon.svg"
 import DesignIcon from "../assets/icons/design-icon.svg"
-import Messenger from "../assets/icons/messenger.jsx"
 import Email from "../assets/icons/email.jsx"
 import Github from "../assets/icons/github.jsx"
 import Instagram from "../assets/icons/instagram.jsx"
 import LinkedIn from "../assets/icons/linkedin.jsx"
-// Images
-//import CreateImage from '../assets/images/create.png'
-// Illustrations
 import IdeaSVG from '../assets/illustrations/idea.svg'
 
 export const HeaderData = {

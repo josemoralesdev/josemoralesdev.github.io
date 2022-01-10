@@ -13,11 +13,11 @@ const ContactSection = styled(Section)`
   }
 `
 const ContactTitle = styled.h2`
-  color: ${props => props.theme.colors.text.accent};
+  color: var(--text-accent);
   max-width: 80%;
 `
 const ContactSubtitle = styled.p`
-  color: ${props => props.theme.colors.text.body};
+  color: var(--text-body);
   font-weight: 300;
   font-size: 1.71em;
   letter-spacing: var(--letter-spacing);
