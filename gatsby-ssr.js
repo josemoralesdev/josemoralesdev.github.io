@@ -1,20 +1,12 @@
-import React from "react";
-import { ThemeContextProvider } from "./src/context/ThemeContext";
+import React from "react"
+import { ThemeContextProvider } from "./src/context/ThemeContext"
 import { Layout } from "./src/components/layout"
-import { colors, darkColors } from "./src/theme/colors";
+import { colors, darkColors } from "./src/theme/colors"
 export const wrapRootElement = ({ element }) => {
-  return (
-    <ThemeContextProvider>
-      {element}
-    </ThemeContextProvider>
-  )
+  return <ThemeContextProvider>{element}</ThemeContextProvider>
 }
 export const wrapPageElement = ({ element, props }) => {
-  return (
-    <Layout {...props}>
-      {element}
-    </Layout>
-  )
+  return <Layout {...props}>{element}</Layout>
 }
 const ScriptTag = () => {
   const codeToRunOnClient = `
@@ -41,10 +33,9 @@ const ScriptTag = () => {
     root.style.setProperty('--text-body', colorMode === 'light' ? '${colors.text.body}' : '${darkColors.text.body}');
     root.style.setProperty('--initial-color-mode', colorMode);
   })();
-  `;
+  `
   // eslint-disable-next-line react/no-danger
-  return <script dangerouslySetInnerHTML={{ __html: codeToRunOnClient }} />;
+  return <script dangerouslySetInnerHTML={{ __html: codeToRunOnClient }} />
 }
-export const onRenderBody = ({ setPreBodyComponents }) => (
+export const onRenderBody = ({ setPreBodyComponents }) =>
   setPreBodyComponents(<ScriptTag key={`script`} />)
-);

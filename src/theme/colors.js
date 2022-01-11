@@ -4,10 +4,10 @@ export const colors = {
     accent: "#000000",
     success: "#138000",
     error: "#D0421B",
-    decoration: "#e6e6e6"
+    decoration: "#e6e6e6",
   },
   bg: {
-    primary: "#ffffff"
+    primary: "#ffffff",
   },
   text: {
     primary: "#000000",
@@ -16,7 +16,7 @@ export const colors = {
     success: "#138000",
     body: "#666666",
     accent: "#000000",
-  }
+  },
 }
 
 export const darkColors = {
@@ -25,10 +25,10 @@ export const darkColors = {
     accent: "#F4F4F4",
     success: "#138000",
     error: "#D0421B",
-    decoration: "#3F3F3F"
+    decoration: "#3F3F3F",
   },
   bg: {
-    primary: "#121212"
+    primary: "#121212",
   },
   text: {
     primary: "#000000",
@@ -37,5 +37,5 @@ export const darkColors = {
     success: "#138000",
     body: "#D1D1D1",
     accent: "#F4F4F4",
-  }
+  },
 }

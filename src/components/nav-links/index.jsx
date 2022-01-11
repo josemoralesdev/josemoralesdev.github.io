@@ -6,9 +6,11 @@ export default function NavLinks({ className, toggleClicked }) {
   const navLinksList = navLinks.map(links => {
     return (
       <li className={className} key={links}>
-        <a href={`/#${links}`} onClick={toggleClicked}>{links}</a>
+        <a href={`/#${links}`} onClick={toggleClicked}>
+          {links}
+        </a>
       </li>
-    );
-  });
+    )
+  })
   return <>{navLinksList}</>
 }

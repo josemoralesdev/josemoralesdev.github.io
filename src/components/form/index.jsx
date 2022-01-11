@@ -61,7 +61,11 @@ const FormStatusMessage = styled.p`
 export default function Form() {
   const [formStatus, setFormStatus] = useState(null)
   const [isLoading, setIsLoading] = useState(false)
-  const { register, handleSubmit, formState: { errors } } = useForm()
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm()
   const FORMSPREE_URL = process.env.GATSBY_FORMSPREE_URL
 
   const onSubmit = async data => {
@@ -93,9 +97,10 @@ export default function Form() {
         <Input
           className="nameInput"
           type="text"
-          {...register('name', { required: true, minLength: 3 })}
+          {...register("name", { required: true, minLength: 3 })}
           defaultValue=""
-          placeholder="Type your name" />
+          placeholder="Type your name"
+        />
         {errors.name && errors.name.type === "required" && (
           <ErrorMessage>This field is required !</ErrorMessage>
         )}
@@ -109,9 +114,10 @@ export default function Form() {
         <Label htmlFor="subject">Subject</Label>
         <Input
           type="text"
-          {...register('subject', { required: true, minLength: 5 })}
+          {...register("subject", { required: true, minLength: 5 })}
           defaultValue=""
-          placeholder="Type a subject" />
+          placeholder="Type a subject"
+        />
         {errors.subject && errors.subject.type === "required" && (
           <ErrorMessage>↑ This field is required!</ErrorMessage>
         )}
@@ -125,9 +131,10 @@ export default function Form() {
         <Label htmlFor="email">Email (optional)</Label>
         <Input
           type="email"
-          {...register('email')}
+          {...register("email")}
           defaultValue=""
-          placeholder="Type your email" />
+          placeholder="Type your email"
+        />
         {errors.email && errors.email.type === "email" && (
           <ErrorMessage>This field is form email format only!</ErrorMessage>
         )}
@@ -135,11 +142,12 @@ export default function Form() {
       <InputWrapper>
         <Label htmlFor="message">Message</Label>
         <TextArea
-          {...register('message', { required: true, minLength: 10 })}
+          {...register("message", { required: true, minLength: 10 })}
           id="message"
           cols="30"
           rows="10"
-          placeholder="Type your message"></TextArea>
+          placeholder="Type your message"
+        ></TextArea>
         {errors.message && errors.message.type === "required" && (
           <ErrorMessage>↑ This field is required!</ErrorMessage>
         )}
@@ -166,5 +174,5 @@ export default function Form() {
         </FormStatusMessage>
       )}
     </FormStyled>
-  );
+  )
 }

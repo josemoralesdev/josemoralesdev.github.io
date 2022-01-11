@@ -6,6 +6,7 @@ title: "Focus Time"
 image: ../assets/images/projects/focustime/main-screen.png
 projectType: "Mobile"
 ---
+
 # FocusTime
 
 <div>
@@ -13,8 +14,10 @@ projectType: "Mobile"
 </div>
 
 ## Overview
+
 ---
-This project was created altogether with the udemy course: [**Complete React Native in 2021: Zero To Mastery**](https://www.udemy.com/course/complete-react-native-mobile-development-zero-to-mastery-with-hooks/) taught by **Andrei Neagoie** - *Senior Software Developer* & **Mo Binni** - *Software / Solutions Architect*.
+
+This project was created altogether with the udemy course: [**Complete React Native in 2021: Zero To Mastery**](https://www.udemy.com/course/complete-react-native-mobile-development-zero-to-mastery-with-hooks/) taught by **Andrei Neagoie** - _Senior Software Developer_ & **Mo Binni** - _Software / Solutions Architect_.
 
 This project has the goal of teaching different React Native functionalities such as:
 
@@ -28,7 +31,9 @@ This project has the goal of teaching different React Native functionalities suc
 A simple app where the user enters a task which wants to focus on, and choose between different times to start a timer. When the timer ends, the app will make the phone vibrate to indicate the time has finished.
 
 ## How it works
+
 ---
+
 When entering the app, the user finds a simple screen: the app title and an input field for filling a task in which wants to focus on for an amount of time. When filling this field, the user presses the button (+) to start the countdown.
 
 This will take us to the next screen, in which shows us different components:
@@ -45,9 +50,11 @@ When the countdown finishes, the phone will vibrate for a few seconds indicating
 When exiting the app, the task list will still be stored & the user has the option of clearing the list with the "Clear" button.
 
 ## Preview
+
 <div align="center">
   <img src="../assets/images/projects/focustime/incomplete-task.gif">
 </div>
 
 ---
-*Source code [available](https://github.com/josemoralesdev/focustime.git)*
+
+_Source code [available](https://github.com/josemoralesdev/focustime.git)_

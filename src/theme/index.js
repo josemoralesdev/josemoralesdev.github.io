@@ -6,4 +6,4 @@ export const theme = {
   devices,
   colors,
   globals,
-};
+}

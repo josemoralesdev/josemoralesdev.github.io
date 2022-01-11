@@ -1,8 +1,8 @@
-const path = require("path");
+const path = require("path")
 
 exports.createPages = async ({ actions, graphql, reporter }) => {
-  const { createPage } = actions;
-  const projectTemplate = path.resolve("src/templates/projectTemplate.js");
+  const { createPage } = actions
+  const projectTemplate = path.resolve("src/templates/projectTemplate.js")
 
   const result = await graphql(`
     {
@@ -16,10 +16,10 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         }
       }
     }
-  `);
+  `)
   if (result.errors) {
-    reporter.panicOnBuild(`Error while running GraphQL Query`);
-    return;
+    reporter.panicOnBuild(`Error while running GraphQL Query`)
+    return
   }
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
     createPage({

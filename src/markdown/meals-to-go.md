@@ -6,11 +6,16 @@ title: "MealsToGo"
 image: ../assets/images/projects/mealstogo/main-screen.png
 projectType: "Mobile"
 ---
+
 # MealsToGo
+
 ![](../assets/images/projects/mealstogo/main-screen.png)
+
 ## Overview
+
 ---
-This project was created altogether with the udemy course: [**Complete React Native in 2021: Zero To Mastery**](https://www.udemy.com/course/complete-react-native-mobile-development-zero-to-mastery-with-hooks/) taught by **Andrei Neagoie** - *Senior Software Developer* & **Mo Binni** - *Software / Solutions Architect*.
+
+This project was created altogether with the udemy course: [**Complete React Native in 2021: Zero To Mastery**](https://www.udemy.com/course/complete-react-native-mobile-development-zero-to-mastery-with-hooks/) taught by **Andrei Neagoie** - _Senior Software Developer_ & **Mo Binni** - _Software / Solutions Architect_.
 This project has the goal of teaching advanced functionalities of React Native such as:
 
 - Hooks (useRef, useContext, useState).
@@ -29,8 +34,11 @@ This project has the goal of teaching advanced functionalities of React Native s
 - Stripe payments API.
 
 It is a medium-advanced application that requires more than beginner knowledge in React Native.
+
 ## How it works
+
 ---
+
 The main screen shows us two options, login in, or signing in, if we don't have an account, we can easily create one pressing on the register button & filling the register form. When we are done it will redirect us to the app.
 If we already have an account, we just fill the login form & it will redirect us to the app if the login information is correct.
 
@@ -45,4 +53,4 @@ The app also has a **Settings** tab, where we can add a profile picture from our
 
 This project was created with **React Native**.
 
-*Source code not available at the moment.*
+_Source code not available at the moment._

@@ -6,7 +6,7 @@ const ButtonStyled = styled.button`
   box-sizing: border-box;
   border: 1px solid var(--primary-color);
   background-color: ${props =>
-    props.primary ? 'var(--primary-color)' : 'var(--background-color)'};
+    props.primary ? "var(--primary-color)" : "var(--background-color)"};
   border-radius: 4px;
   font-family: var(--font-family);
   font-size: 1em;
@@ -17,18 +17,19 @@ const ButtonStyled = styled.button`
   cursor: pointer;
   text-align: center;
   text-transform: uppercase;
-  transition: background-color ${props => props.theme.globals.themeTransitionDuration}, color ${props => props.theme.globals.themeTransitionDuration};
+  transition: background-color
+      ${props => props.theme.globals.themeTransitionDuration},
+    color ${props => props.theme.globals.themeTransitionDuration};
   &:disabled {
     background-color: ${props =>
-    props.primary && lighten(0.15, `${props.theme.colors.ui.primary}`)};
+      props.primary && lighten(0.15, `${props.theme.colors.ui.primary}`)};
   }
   &:hover {
     background-color: ${props =>
-    props.primary && darken(0.15, `${props.theme.colors.ui.primary}`)};
+      props.primary && darken(0.15, `${props.theme.colors.ui.primary}`)};
   }
   span {
-    color: ${props =>
-    props.primary ? "white" : 'var(--text-accent)'};
+    color: ${props => (props.primary ? "white" : "var(--text-accent)")};
     transition: color ${({ theme }) => theme.globals.themeTransitionDuration};
   }
   margin: ${props => props.center && "auto"};

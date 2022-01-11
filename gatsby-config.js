@@ -10,7 +10,7 @@ module.exports = {
     siteUrl: "https://josemoralesdev.github.io",
     url: "https://josemoralesdev.github.io",
     image: `/social-image.png`,
-    keywords: `software engineer, software developer, developer, software, react, reactjs, react developer, front end developer, frontend developer, front end engineer, freelance developer, freelance software engineer, javascript developer`
+    keywords: `software engineer, software developer, developer, software, react, reactjs, react developer, front end developer, frontend developer, front end engineer, freelance developer, freelance software engineer, javascript developer`,
   },
   plugins: [
     {
@@ -24,9 +24,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
-        trackingIds: [
-          "G-BPK0E5YY55",
-        ],
+        trackingIds: ["G-BPK0E5YY55"],
 
         pluginConfig: {
           head: true,
@@ -63,8 +61,8 @@ module.exports = {
               maxWidth: 400,
               linkImagesToOriginal: false,
               sizeByPixelDensity: true,
-              showCaptions: true
-            }
+              showCaptions: true,
+            },
           },
           {
             resolve: `gatsby-remark-copy-linked-files`,
@@ -73,8 +71,8 @@ module.exports = {
               ignoreFileExtensions: [`png`, `jpg`, `jpeg`, `bmp`, `tiff`],
             },
           },
-        ]
-      }
+        ],
+      },
     },
     `gatsby-plugin-sharp`,
     {

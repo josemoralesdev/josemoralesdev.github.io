@@ -24,7 +24,8 @@ const StyledHeader = styled.header`
   border-bottom: 1px solid var(--ui-decoration);
   height: var(--header-height);
   padding: 0 1.38em;
-  transition: background-color var(--themeTransitionDuration),  border-bottom var(--themeTransitionDuration);
+  transition: background-color var(--themeTransitionDuration),
+    border-bottom var(--themeTransitionDuration);
   z-index: 1;
 `
 const Nav = styled.nav`
@@ -65,7 +66,8 @@ const LinkList = styled.ul`
       }
       }
       a {
-        transition: color 0.3s ease-in-out, color ${({ theme }) => theme.globals.themeTransitionDuration};
+        transition: color 0.3s ease-in-out, color ${({ theme }) =>
+          theme.globals.themeTransitionDuration};
         display: flex;
         justify-content: center;
         align-items: center;
@@ -127,11 +129,11 @@ const HamMenu = styled.div`
   }
   &:before {
     transform: ${({ isOpen }) =>
-    isOpen ? ["translateY(10px)", "rotate(135deg)"] : null};
+      isOpen ? ["translateY(10px)", "rotate(135deg)"] : null};
   }
   &::after {
     transform: ${({ isOpen }) =>
-    isOpen ? ["translateY(-10px)", "rotate(-135deg)"] : null};
+      isOpen ? ["translateY(-10px)", "rotate(-135deg)"] : null};
   }
   div {
     transform: ${({ isOpen }) => (isOpen ? "scale(0)" : null)};
@@ -143,7 +145,7 @@ const HamMenu = styled.div`
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
-  const { colorMode } = useContext(ThemeContext);
+  const { colorMode } = useContext(ThemeContext)
 
   const toggleClicked = () => {
     setIsOpen(!isOpen)
@@ -166,7 +168,7 @@ export default function Header() {
         <Wrapper>
           <Logo theme={colorMode} />
           <Nav>
-            <LinkList isOpen={isOpen} >
+            <LinkList isOpen={isOpen}>
               <NavLinks toggleClicked={toggleClicked} />
               <DarkToggle toggleClicked={toggleClicked} />
             </LinkList>

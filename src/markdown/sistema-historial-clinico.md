@@ -6,10 +6,15 @@ title: "Sistema Historial Clinico"
 image: ../assets/images/projects/historialclinico/login-screen.png
 projectType: "Desktop"
 ---
+
 # Sistema Historial Clínico
+
 ![](../assets/images/projects/historialclinico/login-screen.png)
+
 ## Overview
+
 ---
+
 Desktop application created for a doctor's office.
 
 One of the problems was, it didn't existed an efficient way for storing medical histories from the patients; before, medical histories were stored in a written way, but this mean, after every medical check, the doctor had to print, fill & later on store medical histories forms. It is a tedious process & it was not possible to do if the doctor had multiple patients waiting.
@@ -17,7 +22,9 @@ One of the problems was, it didn't existed an efficient way for storing medical 
 The proposed solution was to create a desktop app in which the doctor could easily use & save his patients information in a digital way, all of this inside a database in his computer. This made the process of saving the information faster & having this information in his reach, even better.
 
 ## How it works
+
 ---
+
 The user executes the application shortcut from the desktop to access the application, then it will show a window for login in with his credentials and therefore, access the system.
 
 Inside the system, the Doctor can manage patients information & create their respectives medical histories.
@@ -32,6 +39,7 @@ When double clicking a desired listing, it will display all the information on a
 In this module, the Doctor can view, modify, create or delete medical histories from **existing patients in the database**
 
 ---
+
 This project was created using **C#** & **SQL Server Express**.
 
-*Source code not available*.
+_Source code not available_.

@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from "styled-components"
 
 export const GlobalStyle = createGlobalStyle`
 :root {
@@ -6,7 +6,8 @@ export const GlobalStyle = createGlobalStyle`
   --letter-spacing: 0.1em;
   --header-height: 75px;
   --max-width: 1024px;
-  --themeTransitionDuration: ${({ theme }) => theme.globals.themeTransitionDuration};
+  --themeTransitionDuration: ${({ theme }) =>
+    theme.globals.themeTransitionDuration};
 }
 * {
   box-sizing: border-box;
@@ -77,4 +78,4 @@ html{
     body {
       font-size: 18px;
     }
-`;
+`

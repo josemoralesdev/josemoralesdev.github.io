@@ -10,7 +10,6 @@ const PortfolioTitle = styled.h2`
   color: var(--text-accent);
   transition: var(--themeTransitionDuration);
   max-width: 80vw;
-
 `
 const Grid = styled.div`
   margin-top: 5em;
