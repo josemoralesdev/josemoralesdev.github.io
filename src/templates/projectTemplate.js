@@ -6,6 +6,13 @@ import { Section } from "../common/styles/section"
 import styled from "styled-components"
 
 const Markdown = styled.div`
+  font-variant: normal;
+  font-family: "Arial", "Sans serif";
+  h1,
+  h2,
+  h3 {
+    font-variant: all-small-caps;
+  }
   h1 {
     margin: revert;
     color: var(--text-accent);
@@ -26,13 +33,14 @@ const Markdown = styled.div`
   img {
   }
   p {
-    font-size: 1.35em;
+    text-align: justify;
+    font-size: 1.1em;
     line-height: 1.75;
     color: var(--text-body);
     transition: color var(--themeTransitionDuration);
   }
   li {
-    font-size: 1.2em;
+    font-size: 1.1em;
     line-height: 1.5;
     color: var(--text-body);
     transition: color var(--themeTransitionDuration);
