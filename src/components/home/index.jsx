@@ -102,9 +102,9 @@ export const Home = () => {
         id
         childImageSharp {
           fluid(
-            maxWidth: 500
+            maxWidth: 450
             srcSetBreakpoints: [250, 350, 450, 500]
-            quality: 70
+            quality: 100
           ) {
             ...GatsbyImageSharpFluid
             ...GatsbyImageSharpFluidLimitPresentationSize
